@@ -13,6 +13,18 @@
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+<noscript><style>#pageLoader{display:none!important;}</style></noscript>
+<div class="page-loader" id="pageLoader" aria-hidden="true">
+  <div class="page-loader-brand">
+    <div class="page-loader-mark"><img src="assets/img/logo-n.svg" alt=""></div>
+    <div class="page-loader-tagline">
+      <span data-i18n="loader.tagline1">nowoczesne</span>
+      <span class="is-accent" data-i18n="loader.tagline2">systemy</span>
+      <span data-i18n="loader.tagline3">ogrodzeniowe</span>
+    </div>
+  </div>
+  <div class="page-loader-bar"></div>
+</div>
 
 <svg xmlns="http://www.w3.org/2000/svg" class="visually-hidden" aria-hidden="true">
 <defs>
@@ -32,19 +44,20 @@
     <button type="button" data-lang="pl" class="is-active">PL</button>
     <button type="button" data-lang="en">EN</button>
     <button type="button" data-lang="ua">UA</button>
+    <button type="button" data-lang="cz">CZ</button>
   </div>
 </div>
 
 <main class="card-page">
   <div class="vcard">
-    <div class="vcard-avatar">GM</div>
+    <div class="vcard-avatar"><img src="assets/img/logo-n.svg" alt="" width="44" height="44"></div>
     <div>
-      <h1 class="vcard-name">GRODMAX</h1>
+      <h1 class="vcard-name">N-SYSTEM</h1>
       <p class="vcard-tagline" data-i18n="vcard.tagline">Bramy • Ogrodzenia • Automatyka</p>
     </div>
 
     <div class="vcard-actions">
-      <a href="tel:+48500000000" class="btn btn-primary btn-block">
+      <a href="tel:+48602424608" class="btn btn-primary btn-block">
         <svg><use href="#icon-phone"/></svg>
         <span data-i18n="vcard.call">Zadzwoń</span>
       </a>
@@ -52,7 +65,7 @@
         <svg><use href="#icon-message-circle"/></svg>
         <span data-i18n="vcard.whatsapp">Napisz na WhatsApp</span>
       </a>
-      <a href="mailto:kontakt@grodmax.pl" class="btn btn-ghost btn-block">
+      <a href="mailto:biuro@n-system.net.pl" class="btn btn-ghost btn-block">
         <svg><use href="#icon-mail"/></svg>
         <span data-i18n="vcard.email">Wyślij e-mail</span>
       </a>
@@ -70,8 +83,8 @@
       <div class="info-row">
         <span class="info-icon"><svg><use href="#icon-map-pin"/></svg></span>
         <div>
-          <p data-i18n="contact.info.addressValue">ul. Przykładowa 12, 05-500 Piaseczno</p>
-          <a href="https://www.google.com/maps?q=Piaseczno" target="_blank" rel="noopener" style="color:var(--orange-light);font-weight:600;font-size:.82rem;" data-i18n="vcard.showMap">Pokaż na mapie</a>
+          <p data-i18n="contact.info.addressValue">ul. Breńska 46, 43-436 Górki Małe</p>
+          <a href="https://www.google.com/maps?q=Bre%C5%84ska+46%2C+43-436+G%C3%B3rki+Ma%C5%82e" target="_blank" rel="noopener" style="color:var(--orange-light);font-weight:600;font-size:.82rem;" data-i18n="vcard.showMap">Pokaż na mapie</a>
         </div>
       </div>
     </div>
@@ -97,6 +110,7 @@
 
 <div class="toast" id="toast"></div>
 
+<script defer src="assets/js/page-loader.js"></script>
 <script defer src="assets/js/cookie-consent.js"></script>
 <script defer src="assets/js/i18n.js"></script>
 <script defer src="assets/js/vendor/qrcode.min.js"></script>

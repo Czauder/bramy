@@ -15,33 +15,48 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
-<!-- TODO(client): podmienić dane w JSON-LD (adres, telefon, godziny, sameAs) na docelowe -->
+<!-- TODO(client): uzupełnić "sameAs" linkami do Facebooka/Instagrama, gdy powstaną -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "HomeAndConstructionBusiness",
-  "name": "GRODMAX",
-  "description": "Projektowanie, produkcja i montaż bram wjazdowych, ogrodzeń i automatyki bramowej.",
-  "image": "https://grodmax.pl/favicon.svg",
-  "url": "https://grodmax.pl/",
-  "telephone": "+48500000000",
+  "name": "N-SYSTEM",
+  "legalName": "PUH NIEMIEC Dariusz Niemiec",
+  "taxID": "9371445787",
+  "description": "Własna produkcja i montaż bram wjazdowych, ogrodzeń i automatyki bramowej. Nietypowe wymiary na zamówienie, pomiary, doradztwo, gwarancja.",
+  "image": "https://n-system.net.pl/assets/img/logo-n-dark.svg",
+  "url": "https://n-system.net.pl/",
+  "telephone": "+48602424608",
+  "email": "biuro@n-system.net.pl",
   "priceRange": "$$",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "ul. Przykładowa 12",
-    "postalCode": "05-500",
-    "addressLocality": "Piaseczno",
+    "streetAddress": "ul. Breńska 46",
+    "postalCode": "43-436",
+    "addressLocality": "Górki Małe",
     "addressCountry": "PL"
   },
+  "areaServed": ["Podbeskidzie", "Śląsk", "Czechy"],
   "openingHoursSpecification": [
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "17:00" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "15:00" }
   ],
   "sameAs": []
 }
 </script>
 </head>
 <body class="has-sticky-bar">
+<noscript><style>#pageLoader{display:none!important;}</style></noscript>
+<div class="page-loader" id="pageLoader" aria-hidden="true">
+  <div class="page-loader-brand">
+    <div class="page-loader-mark"><img src="assets/img/logo-n.svg" alt=""></div>
+    <div class="page-loader-tagline">
+      <span data-i18n="loader.tagline1">nowoczesne</span>
+      <span class="is-accent" data-i18n="loader.tagline2">systemy</span>
+      <span data-i18n="loader.tagline3">ogrodzeniowe</span>
+    </div>
+  </div>
+  <div class="page-loader-bar"></div>
+</div>
 <a class="skip-link" href="#main" data-i18n="a11y.skipToContent">Przejdź do treści</a>
 
 <!-- ================= SVG SPRITE ================= -->
@@ -58,6 +73,10 @@
 <symbol id="icon-arrow-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></symbol>
 <symbol id="icon-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
 <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></symbol>
+<symbol id="icon-garage" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="14" x2="21" y2="14"/></symbol>
+<symbol id="icon-gabion" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="1"/><circle cx="7.5" cy="10" r="1" fill="currentColor" stroke="none"/><circle cx="12" cy="12.2" r="1.3" fill="currentColor" stroke="none"/><circle cx="16.5" cy="10" r="1" fill="currentColor" stroke="none"/><circle cx="9" cy="15" r="1" fill="currentColor" stroke="none"/><circle cx="15" cy="15" r="1" fill="currentColor" stroke="none"/></symbol>
+<symbol id="icon-brick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="1"/><line x1="3" y1="9.3" x2="21" y2="9.3"/><line x1="3" y1="14.6" x2="21" y2="14.6"/><line x1="9" y1="4" x2="9" y2="9.3"/><line x1="15" y1="9.3" x2="15" y2="14.6"/><line x1="9" y1="14.6" x2="9" y2="20"/></symbol>
+<symbol id="icon-shelter" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10 L12 4 L21 10"/><line x1="5" y1="10" x2="5" y2="20"/><line x1="19" y1="10" x2="19" y2="20"/><line x1="5" y1="20" x2="19" y2="20"/></symbol>
 <symbol id="icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></symbol>
 <symbol id="icon-zap" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
 <symbol id="icon-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
@@ -83,8 +102,7 @@
 <header class="navbar" id="navbar">
   <div class="container">
     <a href="#main" class="logo">
-      <span class="logo-mark"><img src="assets/img/logo-n.svg" alt="" width="30" height="30"></span>
-      N-<span class="logo-accent">SYSTEM</span>
+      <span class="logo-mark"><img src="assets/img/logo-n.svg" alt="N-SYSTEM" width="34" height="34"></span>
     </a>
     <nav class="nav-links" aria-label="Nawigacja główna">
       <a href="#oferta" data-i18n="nav.oferta">Oferta</a>
@@ -98,12 +116,13 @@
         <button type="button" data-lang="pl" class="is-active">PL</button>
         <button type="button" data-lang="en">EN</button>
         <button type="button" data-lang="ua">UA</button>
+        <button type="button" data-lang="cz">CZ</button>
       </div>
       <button type="button" class="theme-toggle" aria-label="Przełącz jasny/ciemny motyw" data-i18n-aria-label="a11y.themeToggle" aria-pressed="false">
         <svg class="icon-moon"><use href="#icon-moon"/></svg>
         <svg class="icon-sun"><use href="#icon-sun"/></svg>
       </button>
-      <a href="tel:+48500000000" class="btn btn-primary nav-cta">
+      <a href="tel:+48602424608" class="btn btn-primary nav-cta">
         <svg><use href="#icon-phone"/></svg>
         <span data-i18n="nav.call">Zadzwoń</span>
       </a>
@@ -118,8 +137,7 @@
 <div class="mobile-menu" id="mobileMenu">
   <div class="mobile-menu-head">
     <a href="#main" class="logo">
-      <span class="logo-mark"><img src="assets/img/logo-n.svg" alt="" width="30" height="30"></span>
-      N-<span class="logo-accent">SYSTEM</span>
+      <span class="logo-mark"><img src="assets/img/logo-n.svg" alt="N-SYSTEM" width="34" height="34"></span>
     </a>
     <button type="button" class="mobile-menu-close" id="mobileMenuClose" aria-label="Zamknij menu">
       <svg><use href="#icon-close"/></svg>
@@ -133,7 +151,7 @@
     <a href="#kontakt"><svg><use href="#icon-map-pin"/></svg><span data-i18n="nav.kontakt">Kontakt</span></a>
   </nav>
   <div class="mobile-menu-foot">
-    <a href="tel:+48500000000" class="btn btn-primary btn-block">
+    <a href="tel:+48602424608" class="btn btn-primary btn-block">
       <svg><use href="#icon-phone"/></svg>
       <span data-i18n="nav.call">Zadzwoń</span>
     </a>
@@ -141,6 +159,7 @@
       <button type="button" data-lang="pl" class="is-active">PL</button>
       <button type="button" data-lang="en">EN</button>
       <button type="button" data-lang="ua">UA</button>
+        <button type="button" data-lang="cz">CZ</button>
     </div>
   </div>
 </div>
@@ -218,26 +237,50 @@
       <div class="offer-grid" data-reveal-stagger>
         <div class="offer-card">
           <div class="offer-icon"><svg><use href="#icon-gate"/></svg></div>
-          <h3 data-i18n="offer.card1.title">Bramy przesuwne i skrzydłowe</h3>
-          <p data-i18n="offer.card1.text">Bramy wjazdowe szyte na miarę — przesuwne i dwuskrzydłowe, w wykonaniu ręcznym lub w pełni zautomatyzowanym.</p>
+          <h3 data-i18n="offer.card1.title">Bramy przesuwne, skrzydłowe i harmonijkowe</h3>
+          <p data-i18n="offer.card1.text">Bramy wjazdowe własnej produkcji, z wypełnieniem aluminiowym lub stalowym. Nietypowe wymiary i asymetryczne skrzydła na zamówienie.</p>
+          <span class="offer-link" data-i18n="offer.more">Dowiedz się więcej <svg><use href="#icon-arrow-right"/></svg></span>
+        </div>
+        <div class="offer-card">
+          <div class="offer-icon"><svg><use href="#icon-garage"/></svg></div>
+          <h3 data-i18n="offer.card2.title">Bramy garażowe</h3>
+          <p data-i18n="offer.card2.text">Bramy garażowe dopasowane do wymiarów wjazdu — estetyczne, szczelne i gotowe pod automatykę.</p>
           <span class="offer-link" data-i18n="offer.more">Dowiedz się więcej <svg><use href="#icon-arrow-right"/></svg></span>
         </div>
         <div class="offer-card">
           <div class="offer-icon"><svg><use href="#icon-fence"/></svg></div>
-          <h3 data-i18n="offer.card2.title">Ogrodzenia panelowe i kute</h3>
-          <p data-i18n="offer.card2.text">Ogrodzenia panelowe, kute oraz systemowe — pełna gama stylów dopasowana do charakteru posesji.</p>
+          <h3 data-i18n="offer.card3.title">Ogrodzenia panelowe 3D i 2D</h3>
+          <p data-i18n="offer.card3.text">Ogrodzenia panelowe 2D i 3D oraz segmenty z wypełnieniem aluminiowym i stalowym — trwałe, nowoczesne wykończenie posesji.</p>
+          <span class="offer-link" data-i18n="offer.more">Dowiedz się więcej <svg><use href="#icon-arrow-right"/></svg></span>
+        </div>
+        <div class="offer-card">
+          <div class="offer-icon"><svg><use href="#icon-gabion"/></svg></div>
+          <h3 data-i18n="offer.card4.title">Ogrodzenia gabionowe</h3>
+          <p data-i18n="offer.card4.text">Nowoczesne ogrodzenia gabionowe — solidna konstrukcja wypełniona kamieniem, efektowny i trwały wygląd.</p>
+          <span class="offer-link" data-i18n="offer.more">Dowiedz się więcej <svg><use href="#icon-arrow-right"/></svg></span>
+        </div>
+        <div class="offer-card">
+          <div class="offer-icon"><svg><use href="#icon-brick"/></svg></div>
+          <h3 data-i18n="offer.card5.title">Ogrodzenia murowane</h3>
+          <p data-i18n="offer.card5.text">Ogrodzenia murowane z bloczków betonowych — solidna, klasyczna konstrukcja o wysokiej trwałości.</p>
           <span class="offer-link" data-i18n="offer.more">Dowiedz się więcej <svg><use href="#icon-arrow-right"/></svg></span>
         </div>
         <div class="offer-card">
           <div class="offer-icon"><svg><use href="#icon-zap"/></svg></div>
-          <h3 data-i18n="offer.card3.title">Automatyka i napędy</h3>
-          <p data-i18n="offer.card3.text">Silniki do bram, piloty, systemy sterowania i wideodomofony — wygodny i bezpieczny dostęp na posesję.</p>
+          <h3 data-i18n="offer.card6.title">Automatyka do bram</h3>
+          <p data-i18n="offer.card6.text">Napędy, piloty i systemy sterowania do bram wjazdowych i garażowych — komfortowy i bezpieczny dostęp na posesję.</p>
           <span class="offer-link" data-i18n="offer.more">Dowiedz się więcej <svg><use href="#icon-arrow-right"/></svg></span>
         </div>
         <div class="offer-card">
-          <div class="offer-icon"><svg><use href="#icon-shield"/></svg></div>
-          <h3 data-i18n="offer.card4.title">Furtki, balustrady, konstrukcje</h3>
-          <p data-i18n="offer.card4.text">Furtki, balustrady i inne konstrukcje stalowe wykonywane na indywidualne zamówienie.</p>
+          <div class="offer-icon"><svg><use href="#icon-shelter"/></svg></div>
+          <h3 data-i18n="offer.card7.title">Wiaty śmietnikowe</h3>
+          <p data-i18n="offer.card7.text">Wiaty śmietnikowe dopasowane do potrzeb posesji lub wspólnoty — estetyczna zabudowa miejsca na pojemniki.</p>
+          <span class="offer-link" data-i18n="offer.more">Dowiedz się więcej <svg><use href="#icon-arrow-right"/></svg></span>
+        </div>
+        <div class="offer-card">
+          <div class="offer-icon"><svg><use href="#icon-check"/></svg></div>
+          <h3 data-i18n="offer.card8.title">Serwis i montaż</h3>
+          <p data-i18n="offer.card8.text">Profesjonalny montaż, obsługa serwisowa, pomiary i doradztwo na każdym etapie — od projektu po gwarancję.</p>
           <span class="offer-link" data-i18n="offer.more">Dowiedz się więcej <svg><use href="#icon-arrow-right"/></svg></span>
         </div>
       </div>
@@ -300,15 +343,15 @@
       </div>
       <div class="gallery-grid" id="galleryGrid" data-reveal-stagger>
         <!-- TODO(client): podmienić kafle na prawdziwe zdjęcia realizacji -->
-        <button class="gallery-tile" data-category="bramy" data-title="Brama przesuwna — Piaseczno"><svg><use href="#icon-gate"/></svg><span data-i18n="gallery.tileGate">Brama przesuwna</span></button>
-        <button class="gallery-tile" data-category="ogrodzenia" data-title="Ogrodzenie panelowe — Konstancin"><svg><use href="#icon-fence"/></svg><span data-i18n="gallery.tileFence">Ogrodzenie panelowe</span></button>
-        <button class="gallery-tile" data-category="automatyka" data-title="Automatyka bramowa — Ursynów"><svg><use href="#icon-zap"/></svg><span data-i18n="gallery.tileAuto">Automatyka bramowa</span></button>
-        <button class="gallery-tile" data-category="bramy" data-title="Brama dwuskrzydłowa — Wilanów"><svg><use href="#icon-gate"/></svg><span data-i18n="gallery.tileGate2">Brama skrzydłowa</span></button>
-        <button class="gallery-tile" data-category="ogrodzenia" data-title="Ogrodzenie kute — Józefosław"><svg><use href="#icon-fence"/></svg><span data-i18n="gallery.tileFence2">Ogrodzenie kute</span></button>
-        <button class="gallery-tile" data-category="automatyka" data-title="Wideodomofon — Piaseczno"><svg><use href="#icon-zap"/></svg><span data-i18n="gallery.tileAuto2">Wideodomofon</span></button>
-        <button class="gallery-tile" data-category="bramy" data-title="Brama przesuwna — Góra Kalwaria"><svg><use href="#icon-gate"/></svg><span data-i18n="gallery.tileGate">Brama przesuwna</span></button>
-        <button class="gallery-tile" data-category="ogrodzenia" data-title="Ogrodzenie systemowe — Tarczyn"><svg><use href="#icon-fence"/></svg><span data-i18n="gallery.tileFence3">Ogrodzenie systemowe</span></button>
-        <button class="gallery-tile" data-category="automatyka" data-title="Napęd do bramy — Grójec"><svg><use href="#icon-zap"/></svg><span data-i18n="gallery.tileAuto3">Napęd do bramy</span></button>
+        <button class="gallery-tile" data-category="bramy" data-title="Brama przesuwna — Jasienica"><svg><use href="#icon-gate"/></svg><span data-i18n="gallery.tileGate">Brama przesuwna</span></button>
+        <button class="gallery-tile" data-category="ogrodzenia" data-title="Ogrodzenie panelowe — Bielsko-Biała"><svg><use href="#icon-fence"/></svg><span data-i18n="gallery.tileFence">Ogrodzenie panelowe</span></button>
+        <button class="gallery-tile" data-category="automatyka" data-title="Automatyka bramowa — Czechowice-Dziedzice"><svg><use href="#icon-zap"/></svg><span data-i18n="gallery.tileAuto">Automatyka bramowa</span></button>
+        <button class="gallery-tile" data-category="bramy" data-title="Brama dwuskrzydłowa — Skoczów"><svg><use href="#icon-gate"/></svg><span data-i18n="gallery.tileGate2">Brama skrzydłowa</span></button>
+        <button class="gallery-tile" data-category="ogrodzenia" data-title="Ogrodzenie kute — Żywiec"><svg><use href="#icon-fence"/></svg><span data-i18n="gallery.tileFence2">Ogrodzenie kute</span></button>
+        <button class="gallery-tile" data-category="automatyka" data-title="Wideodomofon — Jasienica"><svg><use href="#icon-zap"/></svg><span data-i18n="gallery.tileAuto2">Wideodomofon</span></button>
+        <button class="gallery-tile" data-category="bramy" data-title="Brama przesuwna — Cieszyn"><svg><use href="#icon-gate"/></svg><span data-i18n="gallery.tileGate">Brama przesuwna</span></button>
+        <button class="gallery-tile" data-category="ogrodzenia" data-title="Ogrodzenie systemowe — Strumień"><svg><use href="#icon-fence"/></svg><span data-i18n="gallery.tileFence3">Ogrodzenie systemowe</span></button>
+        <button class="gallery-tile" data-category="automatyka" data-title="Napęd do bramy — Pszczyna"><svg><use href="#icon-zap"/></svg><span data-i18n="gallery.tileAuto3">Napęd do bramy</span></button>
       </div>
 
       <!-- TODO(client): podmienić panele PRZED/PO na prawdziwe zdjęcia z realizacji -->
@@ -344,7 +387,7 @@
           <p data-i18n="reviews.q1">„Ekipa przyjechała punktualnie, montaż bramy przesuwnej trwał dwa dni, wszystko dopięte na ostatni guzik. Polecam każdemu, kto szuka solidnej firmy.”</p>
           <div class="testimonial-author">
             <div class="testimonial-avatar">MK</div>
-            <div><div class="testimonial-name">Marek K.</div><div class="testimonial-role" data-i18n="reviews.loc1">Piaseczno</div></div>
+            <div><div class="testimonial-name">Marek K.</div><div class="testimonial-role" data-i18n="reviews.loc1">Jasienica</div></div>
           </div>
         </article>
         <article class="testimonial-card">
@@ -352,7 +395,7 @@
           <p data-i18n="reviews.q2">„Profesjonalne doradztwo już na etapie wyceny. Ogrodzenie wygląda dokładnie tak, jak sobie wymarzyliśmy.”</p>
           <div class="testimonial-author">
             <div class="testimonial-avatar">AN</div>
-            <div><div class="testimonial-name">Anna N.</div><div class="testimonial-role" data-i18n="reviews.loc2">Konstancin-Jeziorna</div></div>
+            <div><div class="testimonial-name">Anna N.</div><div class="testimonial-role" data-i18n="reviews.loc2">Bielsko-Biała</div></div>
           </div>
         </article>
         <article class="testimonial-card">
@@ -360,7 +403,7 @@
           <p data-i18n="reviews.q3">„Automatyka do bramy działa bez zarzutu od ponad roku. Serwis zawsze odbiera telefon i szybko reaguje.”</p>
           <div class="testimonial-author">
             <div class="testimonial-avatar">TW</div>
-            <div><div class="testimonial-name">Tomasz W.</div><div class="testimonial-role" data-i18n="reviews.loc3">Wilanów</div></div>
+            <div><div class="testimonial-name">Tomasz W.</div><div class="testimonial-role" data-i18n="reviews.loc3">Skoczów</div></div>
           </div>
         </article>
         <article class="testimonial-card">
@@ -368,7 +411,7 @@
           <p data-i18n="reviews.q4">„Konkurencyjna cena i terminowa realizacja — dokładnie to, czego szukaliśmy przy budowie domu.”</p>
           <div class="testimonial-author">
             <div class="testimonial-avatar">KP</div>
-            <div><div class="testimonial-name">Katarzyna P.</div><div class="testimonial-role" data-i18n="reviews.loc4">Góra Kalwaria</div></div>
+            <div><div class="testimonial-name">Katarzyna P.</div><div class="testimonial-role" data-i18n="reviews.loc4">Český Těšín, Czechy</div></div>
           </div>
         </article>
       </div>
@@ -383,11 +426,11 @@
   <section class="cta-banner">
     <div class="container">
       <h2 data-i18n="ctaBanner.title">Zadzwoń po bezpłatną wycenę już dziś</h2>
-      <a href="tel:+48500000000" class="cta-phone">
+      <a href="tel:+48602424608" class="cta-phone">
         <span class="cta-phone-icon"><svg><use href="#icon-phone"/></svg></span>
         <span>
-          <span class="cta-phone-number">+48 500 000 000</span><br>
-          <span class="cta-phone-label" data-i18n="ctaBanner.hours">Pon–Pt 8:00–17:00</span>
+          <span class="cta-phone-number">+48 602 424 608</span><br>
+          <span class="cta-phone-label" data-i18n="ctaBanner.hours">Pon–Pt 8:00–15:00</span>
         </span>
       </a>
     </div>
@@ -422,10 +465,14 @@
             <div class="field">
               <label for="fService" data-i18n="contact.form.service">Usługa</label>
               <select id="fService" name="service">
-                <option data-i18n="offer.card1.title">Bramy przesuwne i skrzydłowe</option>
-                <option data-i18n="offer.card2.title">Ogrodzenia panelowe i kute</option>
-                <option data-i18n="offer.card3.title">Automatyka i napędy</option>
-                <option data-i18n="offer.card4.title">Furtki, balustrady, konstrukcje</option>
+                <option data-i18n="offer.card1.title">Bramy przesuwne, skrzydłowe i harmonijkowe</option>
+                <option data-i18n="offer.card2.title">Bramy garażowe</option>
+                <option data-i18n="offer.card3.title">Ogrodzenia panelowe 3D i 2D</option>
+                <option data-i18n="offer.card4.title">Ogrodzenia gabionowe</option>
+                <option data-i18n="offer.card5.title">Ogrodzenia murowane</option>
+                <option data-i18n="offer.card6.title">Automatyka do bram</option>
+                <option data-i18n="offer.card7.title">Wiaty śmietnikowe</option>
+                <option data-i18n="offer.card8.title">Serwis i montaż</option>
                 <option data-i18n="contact.form.other">Inne / nie wiem</option>
               </select>
             </div>
@@ -447,30 +494,29 @@
           <div class="info-card" data-reveal>
             <div class="info-row">
               <span class="info-icon"><svg><use href="#icon-phone"/></svg></span>
-              <div><h4 data-i18n="contact.info.phone">Telefon</h4><a href="tel:+48500000000">+48 500 000 000</a></div>
+              <div><h4 data-i18n="contact.info.phone">Telefon</h4><a href="tel:+48602424608">+48 602 424 608</a></div>
             </div>
             <div class="info-row">
               <span class="info-icon"><svg><use href="#icon-mail"/></svg></span>
-              <div><h4 data-i18n="contact.info.email">E-mail</h4><a href="mailto:kontakt@grodmax.pl">kontakt@grodmax.pl</a></div>
+              <div><h4 data-i18n="contact.info.email">E-mail</h4><a href="mailto:biuro@n-system.net.pl">biuro@n-system.net.pl</a></div>
             </div>
             <div class="info-row">
               <span class="info-icon"><svg><use href="#icon-map-pin"/></svg></span>
-              <div><h4 data-i18n="contact.info.address">Adres</h4><p data-i18n="contact.info.addressValue">ul. Przykładowa 12, 05-500 Piaseczno</p></div>
+              <div><h4 data-i18n="contact.info.address">Adres</h4><p data-i18n="contact.info.addressValue">ul. Breńska 46, 43-436 Górki Małe</p></div>
             </div>
             <div class="info-row">
               <span class="info-icon"><svg><use href="#icon-clock"/></svg></span>
-              <div><h4 data-i18n="contact.info.hours">Godziny pracy</h4><p data-i18n="contact.info.hoursValue">Pon–Pt: 8:00–17:00, Sob: 9:00–13:00</p></div>
+              <div><h4 data-i18n="contact.info.hours">Godziny pracy</h4><p data-i18n="contact.info.hoursValue">Pon–Pt: 8:00–15:00</p></div>
             </div>
             <div class="social-row">
               <a href="#" aria-label="Facebook"><svg><use href="#icon-facebook"/></svg></a>
               <a href="#" aria-label="Instagram"><svg><use href="#icon-instagram"/></svg></a>
-              <a href="https://wa.me/48500000000" aria-label="WhatsApp"><svg><use href="#icon-message-circle"/></svg></a>
+              <a href="https://wa.me/48602424608" aria-label="WhatsApp"><svg><use href="#icon-message-circle"/></svg></a>
             </div>
           </div>
 
           <div class="map-embed" data-reveal>
-            <!-- TODO(client): podmienić na docelowy adres firmy -->
-            <iframe src="https://www.google.com/maps?q=Piaseczno&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa — lokalizacja firmy"></iframe>
+            <iframe src="https://www.google.com/maps?q=Bre%C5%84ska+46%2C+43-436+G%C3%B3rki+Ma%C5%82e&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa — lokalizacja firmy"></iframe>
           </div>
 
           <a href="wizytowka.html" class="vcard-link-card" data-reveal>
@@ -493,8 +539,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="#main" class="logo">
-          <span class="logo-mark"><img src="assets/img/logo-n.svg" alt="" width="30" height="30"></span>
-          N-<span class="logo-accent">SYSTEM</span>
+          <span class="logo-mark"><img src="assets/img/logo-n.svg" alt="N-SYSTEM" width="34" height="34"></span>
         </a>
         <p data-i18n="footer.about">Bramy, ogrodzenia i automatyka — projektujemy, produkujemy i montujemy z gwarancją jakości na terenie całego regionu.</p>
       </div>
@@ -510,22 +555,23 @@
       <div class="footer-col">
         <h4 data-i18n="footer.offer">Oferta</h4>
         <ul>
-          <li><a href="#oferta" data-i18n="offer.card1.title">Bramy przesuwne i skrzydłowe</a></li>
-          <li><a href="#oferta" data-i18n="offer.card2.title">Ogrodzenia panelowe i kute</a></li>
-          <li><a href="#oferta" data-i18n="offer.card3.title">Automatyka i napędy</a></li>
+          <li><a href="#oferta" data-i18n="offer.card1.title">Bramy przesuwne, skrzydłowe i harmonijkowe</a></li>
+          <li><a href="#oferta" data-i18n="offer.card3.title">Ogrodzenia panelowe 3D i 2D</a></li>
+          <li><a href="#oferta" data-i18n="offer.card6.title">Automatyka do bram</a></li>
+          <li><a href="#oferta" data-i18n="offer.card8.title">Serwis i montaż</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4 data-i18n="footer.contact">Kontakt</h4>
         <ul>
-          <li><a href="tel:+48500000000">+48 500 000 000</a></li>
-          <li><a href="mailto:kontakt@grodmax.pl">kontakt@grodmax.pl</a></li>
+          <li><a href="tel:+48602424608">+48 602 424 608</a></li>
+          <li><a href="mailto:biuro@n-system.net.pl">biuro@n-system.net.pl</a></li>
           <li><a href="wizytowka.html" data-i18n="footer.vcard">Wizytówka cyfrowa</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; <span id="year">2026</span> GRODMAX. <span data-i18n="footer.rights">Wszelkie prawa zastrzeżone.</span></span>
+      <span>&copy; <span id="year">2026</span> N-SYSTEM. <span data-i18n="footer.rights">Wszelkie prawa zastrzeżone.</span></span>
       <a href="polityka-prywatnosci.html" data-i18n="footer.privacy">Polityka prywatności i RODO</a>
     </div>
   </div>
@@ -557,20 +603,21 @@
   <svg><use href="#icon-arrow-down"/></svg>
 </button>
 
-<a href="https://wa.me/48500000000" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Napisz do nas na WhatsApp" data-i18n-aria-label="a11y.whatsappFloat">
+<a href="https://wa.me/48602424608" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Napisz do nas na WhatsApp" data-i18n-aria-label="a11y.whatsappFloat">
   <svg><use href="#icon-message-circle"/></svg>
 </a>
 
 <div class="sticky-call-bar">
-  <a href="tel:+48500000000" class="btn btn-primary">
+  <a href="tel:+48602424608" class="btn btn-primary">
     <svg><use href="#icon-phone"/></svg>
     <span data-i18n="stickyBar.call">Zadzwoń teraz</span>
   </a>
-  <a href="https://wa.me/48500000000" target="_blank" rel="noopener" class="btn btn-whatsapp" aria-label="WhatsApp" data-i18n-aria-label="a11y.whatsappFloat">
+  <a href="https://wa.me/48602424608" target="_blank" rel="noopener" class="btn btn-whatsapp" aria-label="WhatsApp" data-i18n-aria-label="a11y.whatsappFloat">
     <svg><use href="#icon-message-circle"/></svg>
   </a>
 </div>
 
+<script defer src="assets/js/page-loader.js"></script>
 <script defer src="assets/js/cookie-consent.js"></script>
 <script defer src="assets/js/theme-toggle.js"></script>
 <script defer src="assets/js/i18n.js"></script>

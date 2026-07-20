@@ -218,7 +218,7 @@ p { color: var(--text-secondary); }
   display: flex; align-items: center; gap: .6rem; font-family: var(--font-heading); font-weight: 800;
   font-size: 1.25rem; letter-spacing: -.01em; color: var(--on-dark-primary); transition: color var(--transition-base);
 }
-.logo .logo-mark { width: 30px; height: 30px; display: grid; place-items: center; flex-shrink: 0; }
+.logo .logo-mark { width: 34px; height: 34px; display: grid; place-items: center; flex-shrink: 0; }
 .logo .logo-mark img { width: 100%; height: 100%; display: block; }
 .logo-accent { color: var(--on-dark-accent); transition: color var(--transition-base); }
 .nav-links { display: none; align-items: center; gap: 2.1rem; }
@@ -746,14 +746,50 @@ body.menu-open .whatsapp-float {
 }
 @media (min-width: 1024px) { .mobile-menu { display: none !important; } }
 
+@media (max-width: 479px) {
+  /* Cztery przyciski języka + theme-toggle + menu-toggle nie mieszczą się obok
+     logo na najwęższych telefonach — chowamy przełącznik języka z górnego
+     paska (jest wciąż dostępny w rozwiniętym menu mobilnym). */
+  .navbar > .container > .navbar-actions > .lang-switch { display: none; }
+}
 @media (max-width: 399px) {
   h1 { font-size: 2.1rem; }
   .navbar-actions { gap: .4rem; }
-  .lang-switch button { padding: .32rem .5rem; font-size: .72rem; }
   .theme-toggle, .menu-toggle { width: 38px; height: 38px; }
 }
 
 .info-row p, .info-row a, .footer-col a { overflow-wrap: anywhere; }
+
+/* ---------- LOADER STARTOWY ---------- */
+.page-loader {
+  position: fixed; inset: 0; z-index: 1000;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.75rem;
+  background: var(--gradient-hero); background-size: 220% 220%; animation: heroGradientShift 6s ease-in-out infinite;
+  transition: opacity .55s ease, visibility .55s ease;
+}
+.page-loader.is-hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+.page-loader-brand { display: flex; align-items: center; gap: 1.1rem; }
+.page-loader-mark { position: relative; width: 72px; height: 72px; display: grid; place-items: center; flex-shrink: 0; }
+.page-loader-mark::before {
+  content: ''; position: absolute; inset: -30px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 122, 26, .5), transparent 72%);
+  filter: blur(4px); animation: loaderGlow 1.8s ease-in-out infinite;
+}
+.page-loader-mark img { position: relative; z-index: 1; width: 100%; height: 100%; animation: loaderPulse 1.8s ease-in-out infinite; }
+.page-loader-tagline {
+  display: flex; flex-direction: column; text-align: left; text-transform: lowercase;
+  font-family: var(--font-heading); font-weight: 700; font-size: clamp(1rem, 1vw + .8rem, 1.3rem);
+  line-height: 1.28; letter-spacing: .01em; color: var(--on-dark-primary);
+}
+.page-loader-tagline .is-accent { color: var(--on-dark-accent); }
+@keyframes loaderPulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.08); } }
+@keyframes loaderGlow { 0%, 100% { opacity: .45; } 50% { opacity: 1; } }
+.page-loader-bar { position: relative; width: 140px; height: 3px; border-radius: 2px; background: rgba(255, 255, 255, .15); overflow: hidden; }
+.page-loader-bar::after {
+  content: ''; position: absolute; top: 0; left: -40%; width: 40%; height: 100%;
+  background: var(--gradient-cta); border-radius: 2px; animation: loaderSweep 1.3s ease-in-out infinite;
+}
+@keyframes loaderSweep { 0% { left: -40%; } 100% { left: 100%; } }
 
 /* ---------- PREFERS-REDUCED-MOTION ---------- */
 @media (prefers-reduced-motion: reduce) {
@@ -762,4 +798,5 @@ body.menu-open .whatsapp-float {
   [data-reveal], [data-reveal-stagger] > * { opacity: 1; transform: none; }
   .hero, .card-page { animation: none; }
   .offer-card, .gallery-tile { transform: none !important; }
+  .page-loader { transition: opacity .01ms linear; }
 }

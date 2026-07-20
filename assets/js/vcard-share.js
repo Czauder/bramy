@@ -6,13 +6,13 @@
   "use strict";
 
   var CONTACT = {
-    name: "GRODMAX",
+    name: "N-SYSTEM",
     tagline: "Bramy, ogrodzenia i automatyka",
-    phone: "+48500000000",
-    phoneDisplay: "+48 500 000 000",
-    email: "kontakt@grodmax.pl",
-    address: "ul. Przykładowa 12, 05-500 Piaseczno",
-    website: "https://grodmax.pl"
+    phone: "+48602424608",
+    phoneDisplay: "+48 602 424 608",
+    email: "biuro@n-system.net.pl",
+    address: "ul. Breńska 46, 43-436 Górki Małe",
+    website: "https://n-system.net.pl"
   };
 
   function t(key, fallback) {
@@ -53,7 +53,7 @@
       var url = URL.createObjectURL(blob);
       var a = document.createElement("a");
       a.href = url;
-      a.download = "GRODMAX.vcf";
+      a.download = "N-SYSTEM.vcf";
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
