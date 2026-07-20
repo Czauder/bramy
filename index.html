@@ -77,6 +77,8 @@
 <symbol id="icon-gabion" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="1"/><circle cx="7.5" cy="10" r="1" fill="currentColor" stroke="none"/><circle cx="12" cy="12.2" r="1.3" fill="currentColor" stroke="none"/><circle cx="16.5" cy="10" r="1" fill="currentColor" stroke="none"/><circle cx="9" cy="15" r="1" fill="currentColor" stroke="none"/><circle cx="15" cy="15" r="1" fill="currentColor" stroke="none"/></symbol>
 <symbol id="icon-brick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="1"/><line x1="3" y1="9.3" x2="21" y2="9.3"/><line x1="3" y1="14.6" x2="21" y2="14.6"/><line x1="9" y1="4" x2="9" y2="9.3"/><line x1="15" y1="9.3" x2="15" y2="14.6"/><line x1="9" y1="14.6" x2="9" y2="20"/></symbol>
 <symbol id="icon-shelter" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10 L12 4 L21 10"/><line x1="5" y1="10" x2="5" y2="20"/><line x1="19" y1="10" x2="19" y2="20"/><line x1="5" y1="20" x2="19" y2="20"/></symbol>
+<symbol id="icon-remote" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="12" y1="6" x2="12" y2="6.01"/><line x1="9" y1="11" x2="9" y2="11.01"/><line x1="12" y1="11" x2="12" y2="11.01"/><line x1="15" y1="11" x2="15" y2="11.01"/><line x1="9" y1="16" x2="15" y2="16"/></symbol>
+<symbol id="icon-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M18.36 5.64a9 9 0 0 1 0 12.72"/></symbol>
 <symbol id="icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></symbol>
 <symbol id="icon-zap" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
 <symbol id="icon-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
@@ -106,10 +108,10 @@
     </a>
     <nav class="nav-links" aria-label="Nawigacja główna">
       <a href="#oferta" data-i18n="nav.oferta">Oferta</a>
-      <a href="#proces" data-i18n="nav.proces">Jak pracujemy</a>
+      <a href="serwis.html" data-i18n="nav.serwis">Serwis</a>
       <a href="#realizacje" data-i18n="nav.realizacje">Realizacje</a>
       <a href="#opinie" data-i18n="nav.opinie">Opinie</a>
-      <a href="#kontakt" data-i18n="nav.kontakt">Kontakt</a>
+      <a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a>
     </nav>
     <div class="navbar-actions">
       <div class="lang-switch" role="group" aria-label="Wybór języka" data-lang-switch>
@@ -122,9 +124,12 @@
         <svg class="icon-moon"><use href="#icon-moon"/></svg>
         <svg class="icon-sun"><use href="#icon-sun"/></svg>
       </button>
-      <a href="tel:+48602424608" class="btn btn-primary nav-cta">
+      <a href="tel:+48602424608" class="nav-call-icon" aria-label="Zadzwoń" data-i18n-aria-label="nav.call">
         <svg><use href="#icon-phone"/></svg>
-        <span data-i18n="nav.call">Zadzwoń</span>
+      </a>
+      <a href="serwis.html" class="btn btn-primary nav-cta">
+        <svg><use href="#icon-alert"/></svg>
+        <span data-i18n="hero.cta2">Zgłoś usterkę</span>
       </a>
       <button class="menu-toggle" id="menuToggle" aria-label="Otwórz menu" aria-expanded="false" aria-controls="mobileMenu">
         <svg class="icon-menu"><use href="#icon-menu"/></svg>
@@ -145,13 +150,17 @@
   </div>
   <nav class="mobile-menu-links" aria-label="Nawigacja mobilna">
     <a href="#oferta"><svg><use href="#icon-gate"/></svg><span data-i18n="nav.oferta">Oferta</span></a>
-    <a href="#proces"><svg><use href="#icon-list"/></svg><span data-i18n="nav.proces">Jak pracujemy</span></a>
+    <a href="serwis.html"><svg><use href="#icon-alert"/></svg><span data-i18n="nav.serwis">Serwis</span></a>
     <a href="#realizacje"><svg><use href="#icon-image"/></svg><span data-i18n="nav.realizacje">Realizacje</span></a>
     <a href="#opinie"><svg><use href="#icon-star"/></svg><span data-i18n="nav.opinie">Opinie</span></a>
-    <a href="#kontakt"><svg><use href="#icon-map-pin"/></svg><span data-i18n="nav.kontakt">Kontakt</span></a>
+    <a href="kontakt.html"><svg><use href="#icon-map-pin"/></svg><span data-i18n="nav.kontakt">Kontakt</span></a>
   </nav>
   <div class="mobile-menu-foot">
-    <a href="tel:+48602424608" class="btn btn-primary btn-block">
+    <a href="serwis.html" class="btn btn-primary btn-block">
+      <svg><use href="#icon-alert"/></svg>
+      <span data-i18n="hero.cta2">Zgłoś usterkę</span>
+    </a>
+    <a href="tel:+48602424608" class="btn btn-ghost btn-block">
       <svg><use href="#icon-phone"/></svg>
       <span data-i18n="nav.call">Zadzwoń</span>
     </a>
@@ -168,17 +177,18 @@
 
   <!-- ================= HERO ================= -->
   <section class="hero">
-    <div class="container hero-inner" data-reveal>
-      <span class="eyebrow" data-i18n="hero.eyebrow">Bramy • Ogrodzenia • Automatyka</span>
-      <h1 data-i18n="hero.title">Ogrodzenia i bramy, które <span class="gradient-text">robią wrażenie</span></h1>
-      <p class="lede" data-i18n="hero.subtitle">Projektujemy, produkujemy i montujemy bramy wjazdowe, ogrodzenia oraz automatykę. Solidne wykonanie, terminowość i gwarancja na każdym etapie.</p>
+    <div class="container hero-inner" data-reveal-stagger>
+      <span class="eyebrow" data-i18n="hero.eyebrow">Bramy • Automatyka • Serwis</span>
+      <h1 data-i18n="hero.title">Twoja brama, nasza odpowiedzialność — <span class="gradient-text">od pomiaru po szybki serwis</span></h1>
+      <p class="lede" data-i18n="hero.subtitle">Własna produkcja bram i ogrodzeń, automatyka oraz szybki serwis — w jednym miejscu. Nowa brama czy awaria? Wybierz swoją ścieżkę poniżej.</p>
       <div class="hero-cta-row">
         <a href="#kontakt" class="btn btn-primary btn-lg">
           <svg><use href="#icon-phone"/></svg>
-          <span data-i18n="hero.cta1">Bezpłatna wycena</span>
+          <span data-i18n="hero.cta1">Umów pomiar i wycenę</span>
         </a>
-        <a href="#oferta" class="btn btn-ghost btn-lg">
-          <span data-i18n="hero.cta2">Zobacz ofertę</span>
+        <a href="serwis.html" class="btn btn-ghost btn-lg">
+          <svg><use href="#icon-alert"/></svg>
+          <span data-i18n="hero.cta2">Zgłoś usterkę</span>
         </a>
       </div>
       <div class="hero-trustline">
@@ -190,6 +200,26 @@
     <div class="hero-scroll-cue">
       <span data-i18n="hero.scroll">Przewiń</span>
       <svg><use href="#icon-arrow-down"/></svg>
+    </div>
+  </section>
+
+  <!-- ================= WYBÓR ŚCIEŻKI ================= -->
+  <section class="path-select">
+    <div class="container">
+      <div class="path-grid" data-reveal-stagger>
+        <a href="#kontakt" class="path-card is-primary">
+          <div class="path-card-icon"><svg><use href="#icon-gate"/></svg></div>
+          <h3 data-i18n="path.new.title">Potrzebuję nowej bramy</h3>
+          <p data-i18n="path.new.text">Nowa brama, ogrodzenie lub automatyka — od pomiaru, przez dobór rozwiązania, po montaż.</p>
+          <span class="btn btn-primary"><span data-i18n="hero.cta1">Umów pomiar i wycenę</span></span>
+        </a>
+        <a href="serwis.html" class="path-card is-urgent">
+          <div class="path-card-icon"><svg><use href="#icon-alert"/></svg></div>
+          <h3 data-i18n="path.fault.title">Mam problem z bramą</h3>
+          <p data-i18n="path.fault.text">Brama nie działa, napęd szwankuje albo pilot nie reaguje? Zgłoś usterkę — ustalimy kolejny krok.</p>
+          <span class="btn btn-ghost"><span data-i18n="hero.cta2">Zgłoś usterkę</span></span>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -287,40 +317,110 @@
     </div>
   </section>
 
+  <!-- ================= ROZPOZNANIE USTERKI ================= -->
+  <section class="section section-alt" id="serwis-problem">
+    <div class="container">
+      <div class="section-head center" data-reveal>
+        <span class="eyebrow" data-i18n="symptom.eyebrow">Serwis</span>
+        <h2 data-i18n="symptom.title">Rozpoznajesz swój problem?</h2>
+        <p data-i18n="symptom.subtitle">Opisz problem. Skontaktujemy się z Tobą i ustalimy kolejny krok.</p>
+      </div>
+      <div class="symptom-grid" data-reveal-stagger>
+        <a href="serwis.html" class="symptom-chip"><svg><use href="#icon-gate"/></svg><span data-i18n="symptom.item1">Brama się nie otwiera</span></a>
+        <a href="serwis.html" class="symptom-chip"><svg><use href="#icon-zap"/></svg><span data-i18n="symptom.item2">Napęd nie działa</span></a>
+        <a href="serwis.html" class="symptom-chip"><svg><use href="#icon-alert"/></svg><span data-i18n="symptom.item3">Brama działa nierówno</span></a>
+        <a href="serwis.html" class="symptom-chip"><svg><use href="#icon-remote"/></svg><span data-i18n="symptom.item4">Pilot nie reaguje</span></a>
+        <a href="serwis.html" class="symptom-chip"><svg><use href="#icon-sound"/></svg><span data-i18n="symptom.item5">Brama wydaje niepokojące dźwięki</span></a>
+        <a href="serwis.html" class="symptom-chip"><svg><use href="#icon-list"/></svg><span data-i18n="symptom.item6">Potrzebuję przeglądu</span></a>
+        <a href="serwis.html" class="symptom-chip"><svg><use href="#icon-award"/></svg><span data-i18n="symptom.item7">Potrzebuję modernizacji</span></a>
+      </div>
+      <div class="symptom-cta" data-reveal>
+        <a href="serwis.html" class="btn btn-primary btn-lg">
+          <svg><use href="#icon-alert"/></svg>
+          <span data-i18n="hero.cta2">Zgłoś usterkę</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DLACZEGO MY ================= -->
+  <section class="section" id="dlaczego-my">
+    <div class="container">
+      <div class="section-head center" data-reveal>
+        <span class="eyebrow" data-i18n="why.eyebrow">Dlaczego my</span>
+        <h2 data-i18n="why.title">Konkretne przewagi, nie puste hasła</h2>
+      </div>
+      <div class="why-grid" data-reveal-stagger>
+        <div class="why-card">
+          <div class="why-card-icon"><svg><use href="#icon-users"/></svg></div>
+          <h3 data-i18n="why.card1.title">Doradztwo przed zakupem</h3>
+          <p data-i18n="why.card1.text">Pomagamy dobrać rozwiązanie dopasowane do Twojej posesji i budżetu, zanim jeszcze złożysz zamówienie.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-card-icon"><svg><use href="#icon-gate"/></svg></div>
+          <h3 data-i18n="why.card2.title">Montaż i serwis w jednym miejscu</h3>
+          <p data-i18n="why.card2.text">Sami produkujemy, montujemy i serwisujemy — nie musisz szukać osobnej firmy do naprawy.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-card-icon"><svg><use href="#icon-zap"/></svg></div>
+          <h3 data-i18n="why.card3.title">Modernizacja istniejących rozwiązań</h3>
+          <p data-i18n="why.card3.text">Zautomatyzujemy lub unowocześnimy bramę czy ogrodzenie, które już masz — nie tylko sprzedajemy nowe.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-card-icon"><svg><use href="#icon-alert"/></svg></div>
+          <h3 data-i18n="why.card4.title">Szybka diagnoza</h3>
+          <p data-i18n="why.card4.text">Zgłoszenia serwisowe rozpatrujemy sprawnie, żeby jak najszybciej ustalić przyczynę usterki.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-card-icon"><svg><use href="#icon-list"/></svg></div>
+          <h3 data-i18n="why.card5.title">Transparentny proces</h3>
+          <p data-i18n="why.card5.text">Wiesz, na jakim etapie jest Twoje zamówienie — od pomiaru po odbiór realizacji.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ================= PROCES ================= -->
   <section class="section section-alt" id="proces">
     <div class="container">
       <div class="section-head center" data-reveal>
         <span class="eyebrow" data-i18n="process.eyebrow">Jak pracujemy</span>
-        <h2 data-i18n="process.title">Cztery kroki do gotowej realizacji</h2>
+        <h2 data-i18n="process.title">Pięć kroków do gotowej realizacji</h2>
       </div>
       <div class="process-list" data-reveal-stagger>
         <div class="process-step">
           <div class="process-num">1</div>
           <div>
-            <h3 data-i18n="process.step1.title">Bezpłatny pomiar</h3>
-            <p data-i18n="process.step1.text">Umawiamy się na terenie posesji, doradzamy rozwiązania i przygotowujemy bezpłatną wycenę.</p>
+            <h3 data-i18n="process.step1.title">Kontakt</h3>
+            <p data-i18n="process.step1.text">Dzwonisz, piszesz lub zostawiasz zgłoszenie — opisujesz, czego potrzebujesz.</p>
           </div>
         </div>
         <div class="process-step">
           <div class="process-num">2</div>
           <div>
-            <h3 data-i18n="process.step2.title">Projekt i dobór materiałów</h3>
-            <p data-i18n="process.step2.text">Wspólnie dobieramy styl, kolorystykę i materiały dopasowane do Twojego budżetu.</p>
+            <h3 data-i18n="process.step2.title">Diagnoza i pomiar</h3>
+            <p data-i18n="process.step2.text">Umawiamy się na miejscu, poznajemy sytuację i dobieramy rozwiązanie.</p>
           </div>
         </div>
         <div class="process-step">
           <div class="process-num">3</div>
           <div>
-            <h3 data-i18n="process.step3.title">Montaż</h3>
-            <p data-i18n="process.step3.text">Nasza ekipa realizuje montaż zgodnie z harmonogramem, dbając o porządek na budowie.</p>
+            <h3 data-i18n="process.step3.title">Wycena</h3>
+            <p data-i18n="process.step3.text">Otrzymujesz konkretną, indywidualną wycenę bez ukrytych kosztów.</p>
           </div>
         </div>
         <div class="process-step">
           <div class="process-num">4</div>
           <div>
-            <h3 data-i18n="process.step4.title">Serwis gwarancyjny</h3>
-            <p data-i18n="process.step4.text">Zostajemy w kontakcie — serwis, regulacje i wsparcie techniczne po montażu.</p>
+            <h3 data-i18n="process.step4.title">Realizacja</h3>
+            <p data-i18n="process.step4.text">Montaż, naprawa lub modernizacja zgodnie z ustalonym terminem.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="process-num">5</div>
+          <div>
+            <h3 data-i18n="process.step5.title">Serwis</h3>
+            <p data-i18n="process.step5.text">Zostajemy w kontakcie — wsparcie i serwis również po zakończeniu prac.</p>
           </div>
         </div>
       </div>
@@ -547,9 +647,9 @@
         <h4 data-i18n="footer.nav">Nawigacja</h4>
         <ul>
           <li><a href="#oferta" data-i18n="nav.oferta">Oferta</a></li>
+          <li><a href="serwis.html" data-i18n="nav.serwis">Serwis</a></li>
           <li><a href="#realizacje" data-i18n="nav.realizacje">Realizacje</a></li>
           <li><a href="#opinie" data-i18n="nav.opinie">Opinie</a></li>
-          <li><a href="#kontakt" data-i18n="nav.kontakt">Kontakt</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -566,6 +666,8 @@
         <ul>
           <li><a href="tel:+48602424608">+48 602 424 608</a></li>
           <li><a href="mailto:biuro@n-system.net.pl">biuro@n-system.net.pl</a></li>
+          <li><a href="kontakt.html" data-i18n="footer.contactPage">Wszystkie dane kontaktowe</a></li>
+          <li><a href="serwis.html" data-i18n="hero.cta2">Zgłoś usterkę</a></li>
           <li><a href="wizytowka.html" data-i18n="footer.vcard">Wizytówka cyfrowa</a></li>
         </ul>
       </div>
@@ -608,12 +710,13 @@
 </a>
 
 <div class="sticky-call-bar">
-  <a href="tel:+48602424608" class="btn btn-primary">
+  <a href="tel:+48602424608" class="btn btn-ghost">
     <svg><use href="#icon-phone"/></svg>
     <span data-i18n="stickyBar.call">Zadzwoń teraz</span>
   </a>
-  <a href="https://wa.me/48602424608" target="_blank" rel="noopener" class="btn btn-whatsapp" aria-label="WhatsApp" data-i18n-aria-label="a11y.whatsappFloat">
-    <svg><use href="#icon-message-circle"/></svg>
+  <a href="serwis.html" class="btn btn-primary">
+    <svg><use href="#icon-alert"/></svg>
+    <span data-i18n="hero.cta2">Zgłoś usterkę</span>
   </a>
 </div>
 

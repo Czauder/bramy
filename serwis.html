@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<script>(function(){try{if(localStorage.getItem("grodmax-theme")==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zgłoś usterkę — N-SYSTEM | serwis bram i automatyki</title>
+<meta name="description" content="Zgłoś usterkę bramy, napędu lub automatyki. Opisz problem, a skontaktujemy się z Tobą i ustalimy kolejny krok.">
+<meta name="theme-color" content="#ff7a1a">
+<link rel="icon" href="assets/img/logo-n-dark.svg" type="image/svg+xml">
+<meta property="og:title" content="Zgłoś usterkę — N-SYSTEM">
+<meta property="og:description" content="Opisz problem z bramą lub automatyką — skontaktujemy się i ustalimy kolejny krok.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="has-sticky-bar">
+<noscript><style>#pageLoader{display:none!important;}</style></noscript>
+<div class="page-loader" id="pageLoader" aria-hidden="true">
+  <div class="page-loader-brand">
+    <div class="page-loader-mark"><img src="assets/img/logo-n.svg" alt=""></div>
+    <div class="page-loader-tagline">
+      <span data-i18n="loader.tagline1">nowoczesne</span>
+      <span class="is-accent" data-i18n="loader.tagline2">systemy</span>
+      <span data-i18n="loader.tagline3">ogrodzeniowe</span>
+    </div>
+  </div>
+  <div class="page-loader-bar"></div>
+</div>
+
+<svg xmlns="http://www.w3.org/2000/svg" class="visually-hidden" aria-hidden="true">
+<defs>
+<symbol id="icon-gate" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="17" rx="1"/><line x1="2" y1="10" x2="22" y2="10"/><line x1="7" y1="4" x2="7" y2="21"/><line x1="12" y1="4" x2="12" y2="21"/><line x1="17" y1="4" x2="17" y2="21"/></symbol>
+<symbol id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></symbol>
+<symbol id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></symbol>
+<symbol id="icon-arrow-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></symbol>
+<symbol id="icon-arrow-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></symbol>
+<symbol id="icon-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></symbol>
+<symbol id="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+<symbol id="icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></symbol>
+<symbol id="icon-message-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></symbol>
+<symbol id="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></symbol>
+<symbol id="icon-upload" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></symbol>
+<symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></symbol>
+<symbol id="icon-image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></symbol>
+</defs>
+</svg>
+
+<header class="minimal-header">
+  <div class="container">
+    <a href="index.html" class="logo">
+      <span class="logo-mark"><img src="assets/img/logo-n.svg" alt="N-SYSTEM" width="34" height="34"></span>
+    </a>
+    <button type="button" class="theme-toggle" aria-label="Przełącz jasny/ciemny motyw" data-i18n-aria-label="a11y.themeToggle" aria-pressed="false">
+      <svg class="icon-moon"><use href="#icon-moon"/></svg>
+      <svg class="icon-sun"><use href="#icon-sun"/></svg>
+    </button>
+  </div>
+</header>
+
+<main class="legal-page">
+  <div class="container">
+    <a href="index.html" class="legal-back"><svg><use href="#icon-arrow-left"/></svg><span data-i18n="contactPage.back">Powrót do strony głównej</span></a>
+
+    <div class="section-head" data-reveal>
+      <span class="eyebrow" data-i18n="symptom.eyebrow">Serwis</span>
+      <h1 data-i18n="hero.cta2">Zgłoś usterkę</h1>
+      <p data-i18n="symptom.subtitle">Opisz problem. Skontaktujemy się z Tobą i ustalimy kolejny krok.</p>
+    </div>
+    <p class="service-quick-call" data-reveal>
+      <svg style="width:18px;height:18px;color:var(--orange-light);"><use href="#icon-phone"/></svg>
+      <span data-i18n="service.orCall">Wolisz zadzwonić?</span>
+      <a href="tel:+48602424608">+48 602 424 608</a>
+    </p>
+
+    <!-- ================= FORMULARZ ================= -->
+    <form class="service-form" id="serviceForm" action="https://formspree.io/f/YOUR_SERVICE_FORM_ID" method="POST" data-reveal novalidate>
+      <!-- TODO(client): podmienić YOUR_SERVICE_FORM_ID na prawdziwy identyfikator z konta Formspree -->
+
+      <div class="form-section">
+        <div class="form-section-head">
+          <h2 data-i18n="service.section1.title">1. Dane zgłaszającego</h2>
+        </div>
+        <div class="segmented-toggle" role="radiogroup" aria-label="Typ zgłaszającego" data-reporter-toggle>
+          <input type="radio" id="reporterPrivate" name="reporterType" value="Osoba prywatna" checked>
+          <label for="reporterPrivate" data-i18n="service.reporterPrivate">Osoba prywatna</label>
+          <input type="radio" id="reporterCompany" name="reporterType" value="Firma">
+          <label for="reporterCompany" data-i18n="service.reporterCompany">Firma</label>
+        </div>
+
+        <div class="field">
+          <label for="reporterName" data-i18n="service.reporterName">Imię i nazwisko / nazwa firmy</label>
+          <input type="text" id="reporterName" name="reporterName" required autocomplete="name">
+          <span class="field-error" id="reporterNameError" role="alert"><svg><use href="#icon-alert"/></svg><span data-i18n="service.err.required">To pole jest wymagane.</span></span>
+        </div>
+
+        <div class="conditional-fields" id="companyFields" hidden>
+          <div class="form-section-head">
+            <h2 data-i18n="service.invoice.title">Dane do faktury (opcjonalnie)</h2>
+            <p data-i18n="service.invoice.subtitle">Wypełnij, jeśli potrzebujesz faktury na firmę.</p>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="companyName" data-i18n="service.invoice.company">Nazwa firmy</label>
+              <input type="text" id="companyName" name="companyName" autocomplete="organization">
+            </div>
+            <div class="field">
+              <label for="companyNip" data-i18n="service.invoice.nip">NIP</label>
+              <input type="text" id="companyNip" name="companyNip" inputmode="numeric" autocomplete="off">
+            </div>
+          </div>
+          <div class="field">
+            <label for="companyAddress" data-i18n="service.invoice.address">Adres</label>
+            <input type="text" id="companyAddress" name="companyAddress" autocomplete="street-address">
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="companyPostal" data-i18n="service.invoice.postal">Kod pocztowy</label>
+              <input type="text" id="companyPostal" name="companyPostal" autocomplete="postal-code">
+            </div>
+            <div class="field">
+              <label for="companyCity" data-i18n="service.invoice.city">Miejscowość</label>
+              <input type="text" id="companyCity" name="companyCity" autocomplete="address-level2">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <div class="form-section-head">
+          <h2 data-i18n="service.section2.title">2. Osoba do kontaktu</h2>
+        </div>
+        <label class="checkbox-row">
+          <input type="checkbox" id="contactSame" name="contactSameAsReporter" checked>
+          <span data-i18n="service.contactSame">Osoba do kontaktu jest taka sama jak zgłaszający</span>
+        </label>
+        <div class="field" id="contactPersonField" hidden>
+          <label for="contactPersonName" data-i18n="service.contactPersonName">Osoba do kontaktu</label>
+          <input type="text" id="contactPersonName" name="contactPersonName" autocomplete="name">
+        </div>
+      </div>
+
+      <div class="form-section">
+        <div class="form-section-head">
+          <h2 data-i18n="service.section3.title">3. Kontakt</h2>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="svcPhone" data-i18n="contact.form.phone">Telefon</label>
+            <input type="tel" id="svcPhone" name="phone" required autocomplete="tel" inputmode="tel" aria-describedby="svcPhoneError">
+            <span class="field-error" id="svcPhoneError" role="alert"><svg><use href="#icon-alert"/></svg><span data-i18n="service.err.phone">Podaj poprawny numer telefonu.</span></span>
+          </div>
+          <div class="field">
+            <label for="svcEmail" data-i18n="contact.form.email">E-mail</label>
+            <input type="email" id="svcEmail" name="email" required autocomplete="email" inputmode="email" aria-describedby="svcEmailError">
+            <span class="field-error" id="svcEmailError" role="alert"><svg><use href="#icon-alert"/></svg><span data-i18n="service.err.email">Podaj poprawny adres e-mail.</span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <div class="form-section-head">
+          <h2 data-i18n="service.section4.title">4. Miejsce usterki</h2>
+          <p data-i18n="service.section4.subtitle">Działamy na terenie: Podbeskidzie, Śląsk, Czechy.</p>
+        </div>
+        <div class="field">
+          <label for="faultStreet" data-i18n="service.faultStreet">Ulica i numer</label>
+          <input type="text" id="faultStreet" name="faultStreet" required autocomplete="street-address" aria-describedby="faultStreetError">
+          <span class="field-error" id="faultStreetError" role="alert"><svg><use href="#icon-alert"/></svg><span data-i18n="service.err.required">To pole jest wymagane.</span></span>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="faultPostal" data-i18n="service.invoice.postal">Kod pocztowy</label>
+            <input type="text" id="faultPostal" name="faultPostal" required autocomplete="postal-code" aria-describedby="faultPostalError">
+            <span class="field-error" id="faultPostalError" role="alert"><svg><use href="#icon-alert"/></svg><span data-i18n="service.err.required">To pole jest wymagane.</span></span>
+          </div>
+          <div class="field">
+            <label for="faultCity" data-i18n="service.invoice.city">Miejscowość</label>
+            <input type="text" id="faultCity" name="faultCity" required autocomplete="address-level2" aria-describedby="faultCityError">
+            <span class="field-error" id="faultCityError" role="alert"><svg><use href="#icon-alert"/></svg><span data-i18n="service.err.required">To pole jest wymagane.</span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <div class="form-section-head">
+          <h2 data-i18n="service.section5.title">5. Informacje o usterce</h2>
+        </div>
+        <div class="field">
+          <label for="deviceType" data-i18n="service.deviceType">Jakiego urządzenia dotyczy zgłoszenie?</label>
+          <select id="deviceType" name="deviceType">
+            <option data-i18n="service.device.garage">Brama garażowa</option>
+            <option data-i18n="service.device.driveway">Brama wjazdowa</option>
+            <option data-i18n="service.device.drive">Napęd</option>
+            <option data-i18n="service.device.automation">Automatyka</option>
+            <option data-i18n="service.device.remote">Pilot</option>
+            <option value="Inne" data-i18n="contact.form.other">Inne</option>
+          </select>
+        </div>
+        <div class="field" id="deviceOtherField" hidden>
+          <label for="deviceOther" data-i18n="service.deviceOther">Wpisz nazwę urządzenia</label>
+          <input type="text" id="deviceOther" name="deviceOther">
+        </div>
+        <div class="field">
+          <label for="description" data-i18n="service.description">Opisz dokładnie, co się dzieje</label>
+          <textarea id="description" name="description" required rows="5" aria-describedby="descriptionError" data-i18n-placeholder="service.descriptionPh" placeholder="Np. brama nie otwiera się po naciśnięciu pilota, słychać pracę silnika, ale skrzydło się nie porusza."></textarea>
+          <span class="field-error" id="descriptionError" role="alert"><svg><use href="#icon-alert"/></svg><span data-i18n="service.err.required">To pole jest wymagane.</span></span>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="faultWhen" data-i18n="service.faultWhen">Kiedy problem wystąpił?</label>
+            <input type="text" id="faultWhen" name="faultWhen" data-i18n-placeholder="service.faultWhenPh" placeholder="Np. wczoraj wieczorem">
+          </div>
+          <div class="field">
+            <span data-i18n="service.faultConstant">Czy usterka występuje cały czas?</span>
+            <div class="radio-row" style="margin-top:.5rem;">
+              <label class="radio-option"><input type="radio" name="faultConstant" value="Tak" checked><span data-i18n="service.yes">Tak</span></label>
+              <label class="radio-option"><input type="radio" name="faultConstant" value="Czasami"><span data-i18n="service.sometimes">Czasami</span></label>
+              <label class="radio-option"><input type="radio" name="faultConstant" value="Nie wiem"><span data-i18n="service.dontKnow">Nie wiem</span></label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <div class="form-section-head">
+          <h2 data-i18n="service.section6.title">6. Zdjęcia (opcjonalnie)</h2>
+          <p data-i18n="service.section6.subtitle">Zdjęcie bramy, napędu, tabliczki znamionowej lub uszkodzenia pomaga nam szybciej ocenić sytuację.</p>
+        </div>
+        <label class="file-drop" id="fileDrop">
+          <svg><use href="#icon-upload"/></svg>
+          <div class="file-drop-text"><strong data-i18n="service.fileClick">Kliknij, aby dodać zdjęcia</strong> <span data-i18n="service.fileDrag">lub przeciągnij je tutaj</span></div>
+          <div class="file-drop-hint" data-i18n="service.fileHint">JPG, PNG — maks. kilka zdjęć</div>
+          <input type="file" id="attachments" name="attachments" accept="image/*" multiple>
+        </label>
+        <div class="file-preview-list" id="filePreviewList"></div>
+      </div>
+
+      <div class="form-section">
+        <label class="checkbox-row">
+          <input type="checkbox" id="svcConsent" name="consent" required>
+          <span data-i18n="service.consent">Wyrażam zgodę na przetwarzanie moich danych osobowych w celu obsługi zgłoszenia i kontaktu w sprawie realizacji usługi — zgodnie z <a href="polityka-prywatnosci.html">Polityką Prywatności</a>.</span>
+        </label>
+        <span class="field-error" id="svcConsentError" role="alert"><svg><use href="#icon-alert"/></svg><span data-i18n="service.err.consent">Zgoda jest wymagana, aby wysłać zgłoszenie.</span></span>
+
+        <input type="text" name="_gotcha" class="honeypot-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <button type="submit" class="btn btn-primary btn-block btn-lg" id="serviceSubmit">
+          <span data-i18n="service.submit">Wyślij zgłoszenie</span>
+        </button>
+        <div class="form-status" id="serviceFormStatus" role="status"></div>
+      </div>
+    </form>
+
+    <!-- ================= EKRAN SUKCESU ================= -->
+    <div class="form-success" id="formSuccess">
+      <div class="form-success-icon"><svg><use href="#icon-check"/></svg></div>
+      <h2 data-i18n="service.success.title">Zgłoszenie zostało wysłane.</h2>
+      <p data-i18n="service.success.text">Dziękujemy. Otrzymaliśmy Twoje zgłoszenie i skontaktujemy się z Tobą w sprawie kolejnych kroków.</p>
+      <a href="index.html" class="btn btn-primary btn-lg" data-i18n="service.success.back">Wróć do strony głównej</a>
+    </div>
+  </div>
+</main>
+
+<div class="cookie-banner" id="cookieBanner">
+  <p data-i18n="cookies.text">Używamy plików cookies, aby zapewnić prawidłowe działanie strony. Więcej informacji znajdziesz w <a href="polityka-prywatnosci.html">Polityce Prywatności</a>.</p>
+  <div class="cookie-actions">
+    <button class="btn btn-ghost" id="cookieDecline" data-i18n="cookies.decline">Odrzuć</button>
+    <button class="btn btn-primary" id="cookieAccept" data-i18n="cookies.accept">Akceptuję</button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<button type="button" class="back-to-top" id="backToTop" aria-label="Przewiń do góry" data-i18n-aria-label="a11y.backToTop">
+  <svg><use href="#icon-arrow-down"/></svg>
+</button>
+
+<a href="https://wa.me/48602424608" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Napisz do nas na WhatsApp" data-i18n-aria-label="a11y.whatsappFloat">
+  <svg><use href="#icon-message-circle"/></svg>
+</a>
+
+<script defer src="assets/js/page-loader.js"></script>
+<script defer src="assets/js/cookie-consent.js"></script>
+<script defer src="assets/js/theme-toggle.js"></script>
+<script defer src="assets/js/i18n.js"></script>
+<script defer src="assets/js/main.js"></script>
+<script defer src="assets/js/service-form.js"></script>
+</body>
+</html>
