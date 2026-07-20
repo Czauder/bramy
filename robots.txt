@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# TODO(client): podmienić domenę po wdrożeniu na docelowy hosting
+Sitemap: https://grodmax.pl/sitemap.xml
