@@ -1,5 +1,6 @@
 /* ============================================================
-   gallery.js — filtrowanie Realizacji + lightbox. Tylko index.html.
+   gallery.js — galeria realizacji (siatka zdjęć + "pokaż więcej") + lightbox.
+   Tylko index.html.
    ============================================================ */
 (function () {
   "use strict";
@@ -7,24 +8,22 @@
   var grid = document.getElementById("galleryGrid");
   if (!grid) return;
 
-  var filterButtons = document.querySelectorAll(".filter-btn");
   var tiles = Array.prototype.slice.call(grid.querySelectorAll(".gallery-tile"));
 
-  filterButtons.forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      filterButtons.forEach(function (b) { b.classList.remove("is-active"); });
-      btn.classList.add("is-active");
-      var filter = btn.getAttribute("data-filter");
+  /* ---------- Pokaż więcej ---------- */
+  var moreBtn = document.getElementById("galleryMoreBtn");
+  if (moreBtn) {
+    moreBtn.addEventListener("click", function () {
       tiles.forEach(function (tile) {
-        var show = filter === "all" || tile.getAttribute("data-category") === filter;
-        tile.classList.toggle("is-hidden", !show);
+        if (tile.classList.contains("is-more")) tile.classList.remove("is-hidden");
       });
+      moreBtn.parentElement.remove();
     });
-  });
+  }
 
   /* ---------- Lightbox ---------- */
   var lightbox = document.getElementById("lightbox");
-  var lightboxIcon = document.getElementById("lightboxIcon");
+  var lightboxImage = document.getElementById("lightboxImage");
   var lightboxTitle = document.getElementById("lightboxTitle");
   var closeBtn = document.getElementById("lightboxClose");
   var prevBtn = document.getElementById("lightboxPrev");
@@ -41,9 +40,10 @@
     if (!list.length) return;
     currentIndex = (index + list.length) % list.length;
     var tile = list[currentIndex];
-    var iconUse = tile.querySelector("svg use");
-    lightboxIcon.querySelector("use").setAttribute("href", iconUse.getAttribute("href"));
-    lightboxTitle.textContent = tile.getAttribute("data-title") || "";
+    var img = tile.querySelector("img");
+    lightboxImage.src = img.src;
+    lightboxImage.alt = img.alt;
+    lightboxTitle.textContent = (currentIndex + 1) + " / " + list.length;
     lastFocused = document.activeElement;
     lightbox.classList.add("is-open");
     closeBtn.focus();
@@ -62,7 +62,7 @@
     openLightbox(currentIndex + dir);
   }
 
-  tiles.forEach(function (tile, i) {
+  tiles.forEach(function (tile) {
     tile.addEventListener("click", function () { openLightbox(visibleTiles().indexOf(tile)); });
   });
 

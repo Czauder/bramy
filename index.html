@@ -75,6 +75,7 @@
 <symbol id="icon-chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></symbol>
 <symbol id="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></symbol>
 <symbol id="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></symbol>
+<symbol id="icon-zoom" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M9 21H3v-6"/><path d="M21 3l-7 7"/><path d="M3 21l7-7"/></symbol>
 <symbol id="icon-arrow-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></symbol>
 <symbol id="icon-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
 <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></symbol>
@@ -426,25 +427,55 @@
       <div class="section-head" data-reveal>
         <span class="eyebrow" data-i18n="gallery.eyebrow">Realizacje</span>
         <h2 data-i18n="gallery.title">Zobacz nasze ostatnie projekty</h2>
-        <p data-i18n="gallery.subtitle">Wybór realizacji z ostatnich miesięcy — zdjęcia poglądowe, wkrótce podmienimy na fotografie z naszych realizacji.</p>
-      </div>
-      <div class="filter-row" data-reveal role="group" aria-label="Filtruj realizacje">
-        <button class="filter-btn is-active" data-filter="all" data-i18n="gallery.filterAll">Wszystkie</button>
-        <button class="filter-btn" data-filter="bramy" data-i18n="gallery.filterGates">Bramy</button>
-        <button class="filter-btn" data-filter="ogrodzenia" data-i18n="gallery.filterFences">Ogrodzenia</button>
-        <button class="filter-btn" data-filter="automatyka" data-i18n="gallery.filterAuto">Automatyka</button>
+        <p data-i18n="gallery.subtitle">Bramy, ogrodzenia i automatyka, które zaprojektowaliśmy, wyprodukowaliśmy i zamontowaliśmy dla naszych klientów.</p>
       </div>
       <div class="gallery-grid" id="galleryGrid" data-reveal-stagger>
-        <!-- TODO(client): podmienić kafle na prawdziwe zdjęcia realizacji -->
-        <button class="gallery-tile" data-category="bramy" data-title="Brama przesuwna — Jasienica"><svg><use href="#icon-gate"/></svg><span data-i18n="gallery.tileGate">Brama przesuwna</span></button>
-        <button class="gallery-tile" data-category="ogrodzenia" data-title="Ogrodzenie panelowe — Bielsko-Biała"><svg><use href="#icon-fence"/></svg><span data-i18n="gallery.tileFence">Ogrodzenie panelowe</span></button>
-        <button class="gallery-tile" data-category="automatyka" data-title="Automatyka bramowa — Czechowice-Dziedzice"><svg><use href="#icon-zap"/></svg><span data-i18n="gallery.tileAuto">Automatyka bramowa</span></button>
-        <button class="gallery-tile" data-category="bramy" data-title="Brama dwuskrzydłowa — Skoczów"><svg><use href="#icon-gate"/></svg><span data-i18n="gallery.tileGate2">Brama skrzydłowa</span></button>
-        <button class="gallery-tile" data-category="ogrodzenia" data-title="Ogrodzenie kute — Żywiec"><svg><use href="#icon-fence"/></svg><span data-i18n="gallery.tileFence2">Ogrodzenie kute</span></button>
-        <button class="gallery-tile" data-category="automatyka" data-title="Wideodomofon — Jasienica"><svg><use href="#icon-zap"/></svg><span data-i18n="gallery.tileAuto2">Wideodomofon</span></button>
-        <button class="gallery-tile" data-category="bramy" data-title="Brama przesuwna — Cieszyn"><svg><use href="#icon-gate"/></svg><span data-i18n="gallery.tileGate">Brama przesuwna</span></button>
-        <button class="gallery-tile" data-category="ogrodzenia" data-title="Ogrodzenie systemowe — Strumień"><svg><use href="#icon-fence"/></svg><span data-i18n="gallery.tileFence3">Ogrodzenie systemowe</span></button>
-        <button class="gallery-tile" data-category="automatyka" data-title="Napęd do bramy — Pszczyna"><svg><use href="#icon-zap"/></svg><span data-i18n="gallery.tileAuto3">Napęd do bramy</span></button>
+        <button class="gallery-tile" data-index="1"><img src="assets/img/galeria/realizacja-01.jpg" alt="Realizacja N-SYSTEM 1" width="800" height="600" loading="lazy" decoding="async"><span class="gallery-zoom"><svg><use href="#icon-zoom"/></svg></span></button>
+        <button class="gallery-tile" data-index="2"><img src="assets/img/galeria/realizacja-02.jpg" alt="Realizacja N-SYSTEM 2" width="800" height="600" loading="lazy" decoding="async"><span class="gallery-zoom"><svg><use href="#icon-zoom"/></svg></span></button>
+        <button class="gallery-tile is-wide" data-index="3"><img src="assets/img/galeria/realizacja-03.jpg" alt="Realizacja N-SYSTEM 3" width="800" height="600" loading="lazy" decoding="async"><span class="gallery-zoom"><svg><use href="#icon-zoom"/></svg></span></button>
+        <button class="gallery-tile" data-index="4"><img src="assets/img/galeria/realizacja-04.jpg" alt="Realizacja N-SYSTEM 4" width="800" height="600" loading="lazy" decoding="async"><span class="gallery-zoom"><svg><use href="#icon-zoom"/></svg></span></button>
+        <button class="gallery-tile" data-index="5"><img src="assets/img/galeria/realizacja-05.jpg" alt="Realizacja N-SYSTEM 5" width="800" height="600" loading="lazy" decoding="async"><span class="gallery-zoom"><svg><use href="#icon-zoom"/></svg></span></button>
+        <button class="gallery-tile" data-index="6"><img src="assets/img/galeria/realizacja-06.jpg" alt="Realizacja N-SYSTEM 6" width="800" height="600" loading="lazy" decoding="async"><span class="gallery-zoom"><svg><use href="#icon-zoom"/></svg></span></button>
+        <button class="gallery-tile" data-index="7"><img src="assets/img/galeria/realizacja-07.jpg" alt="Realizacja N-SYSTEM 7" width="800" height="600" loading="lazy" decoding="async"><span class="gallery-zoom"><svg><use href="#icon-zoom"/></svg></span></button>
+        <button class="gallery-tile" data-index="8"><img src="assets/img/galeria/realizacja-08.jpg" alt="Realizacja N-SYSTEM 8" width="800" height="600" loading="lazy" decoding="async"><span class="gallery-zoom"><svg><use href="#icon-zoom"/></svg></span></button>
+        <button class="gallery-tile is-wide" data-index="9"><img src="assets/img/galeria/realizacja-09.jpg" alt="Realizacja N-SYSTEM 9" width="800" height="600" loading="lazy" decoding="async"><span class="gallery-zoom"><svg><use href="#icon-zoom"/></svg></span></button>
+        <button class="gallery-tile" data-index="10"><img src="assets/img/galeria/realizacja-10.jpg" alt="Realizacja N-SYSTEM 10" width="800" height="600" loading="lazy" decoding="async"><span class="gallery-zoom"><svg><use href="#icon-zoom"/></svg></span></button>
+        <button class="gallery-tile" data-index="11"><img src="assets/img/galeria/realizacja-11.jpg" alt="Realizacja N-SYSTEM 11" width="800" height="600" loading="lazy" decoding="async"><span class="gallery-zoom"><svg><use href="#icon-zoom"/></svg></span></button>
+        <button class="gallery-tile" data-index="12"><img src="assets/img/galeria/realizacja-12.jpg" alt="Realizacja N-SYSTEM 12" width="800" height="600" loading="lazy" decoding="async"><span class="gallery-zoom"><svg><use href="#icon-zoom"/></svg></span></button>
+        <button class="gallery-tile is-more is-hidden" data-index="13"><img src="assets/img/galeria/realizacja-13.jpg" alt="Realizacja N-SYSTEM 13" width="800" height="600" loading="lazy" decoding="async"><span class="gallery-zoom"><svg><use href="#icon-zoom"/></svg></span></button>
+        <button class="gallery-tile is-more is-hidden" data-index="14"><img src="assets/img/galeria/realizacja-14.jpg" alt="Realizacja N-SYSTEM 14" width="800" height="600" loading="lazy" decoding="async"><span class="gallery-zoom"><svg><use href="#icon-zoom"/></svg></span></button>
+        <button class="gallery-tile is-wide is-more is-hidden" data-index="15"><img src="assets/img/galeria/realizacja-15.jpg" alt="Realizacja N-SYSTEM 15" width="800" height="600" loading="lazy" decoding="async"><span class="gallery-zoom"><svg><use href="#icon-zoom"/></svg></span></button>
+        <button class="gallery-tile is-more is-hidden" data-index="16"><img src="assets/img/galeria/realizacja-16.jpg" alt="Realizacja N-SYSTEM 16" width="800" height="600" loading="lazy" decoding="async"><span class="gallery-zoom"><svg><use href="#icon-zoom"/></svg></span></button>
+        <button class="gallery-tile is-more is-hidden" data-index="17"><img src="assets/img/galeria/realizacja-17.jpg" alt="Realizacja N-SYSTEM 17" width="800" height="600" loading="lazy" decoding="async"><span class="gallery-zoom"><svg><use href="#icon-zoom"/></svg></span></button>
+        <button class="gallery-tile is-more is-hidden" data-index="18"><img src="assets/img/galeria/realizacja-18.jpg" alt="Realizacja N-SYSTEM 18" width="800" height="600" loading="lazy" decoding="async"><span class="gallery-zoom"><svg><use href="#icon-zoom"/></svg></span></button>
+        <button class="gallery-tile is-more is-hidden" data-index="19"><img src="assets/img/galeria/realizacja-19.jpg" alt="Realizacja N-SYSTEM 19" width="800" height="600" loading="lazy" decoding="async"><span class="gallery-zoom"><svg><use href="#icon-zoom"/></svg></span></button>
+        <button class="gallery-tile is-more is-hidden" data-index="20"><img src="assets/img/galeria/realizacja-20.jpg" alt="Realizacja N-SYSTEM 20" width="800" height="600" loading="lazy" decoding="async"><span class="gallery-zoom"><svg><use href="#icon-zoom"/></svg></span></button>
+        <button class="gallery-tile is-more is-hidden" data-index="21"><img src="assets/img/galeria/realizacja-21.jpg" alt="Realizacja N-SYSTEM 21" width="800" height="600" loading="lazy" decoding="async"><span class="gallery-zoom"><svg><use href="#icon-zoom"/></svg></span></button>
+        <button class="gallery-tile is-wide is-more is-hidden" data-index="22"><img src="assets/img/galeria/realizacja-22.jpg" alt="Realizacja N-SYSTEM 22" width="800" height="600" loading="lazy" decoding="async"><span class="gallery-zoom"><svg><use href="#icon-zoom"/></svg></span></button>
+        <button class="gallery-tile is-more is-hidden" data-index="23"><img src="assets/img/galeria/realizacja-23.jpg" alt="Realizacja N-SYSTEM 23" width="800" height="600" loading="lazy" decoding="async"><span class="gallery-zoom"><svg><use href="#icon-zoom"/></svg></span></button>
+        <button class="gallery-tile is-more is-hidden" data-index="24"><img src="assets/img/galeria/realizacja-24.jpg" alt="Realizacja N-SYSTEM 24" width="800" height="600" loading="lazy" decoding="async"><span class="gallery-zoom"><svg><use href="#icon-zoom"/></svg></span></button>
+        <button class="gallery-tile is-more is-hidden" data-index="25"><img src="assets/img/galeria/realizacja-25.jpg" alt="Realizacja N-SYSTEM 25" width="800" height="600" loading="lazy" decoding="async"><span class="gallery-zoom"><svg><use href="#icon-zoom"/></svg></span></button>
+        <button class="gallery-tile is-more is-hidden" data-index="26"><img src="assets/img/galeria/realizacja-26.jpg" alt="Realizacja N-SYSTEM 26" width="800" height="600" loading="lazy" decoding="async"><span class="gallery-zoom"><svg><use href="#icon-zoom"/></svg></span></button>
+        <button class="gallery-tile is-more is-hidden" data-index="27"><img src="assets/img/galeria/realizacja-27.jpg" alt="Realizacja N-SYSTEM 27" width="800" height="600" loading="lazy" decoding="async"><span class="gallery-zoom"><svg><use href="#icon-zoom"/></svg></span></button>
+        <button class="gallery-tile is-wide is-more is-hidden" data-index="28"><img src="assets/img/galeria/realizacja-28.jpg" alt="Realizacja N-SYSTEM 28" width="800" height="600" loading="lazy" decoding="async"><span class="gallery-zoom"><svg><use href="#icon-zoom"/></svg></span></button>
+        <button class="gallery-tile is-more is-hidden" data-index="29"><img src="assets/img/galeria/realizacja-29.jpg" alt="Realizacja N-SYSTEM 29" width="800" height="600" loading="lazy" decoding="async"><span class="gallery-zoom"><svg><use href="#icon-zoom"/></svg></span></button>
+        <button class="gallery-tile is-more is-hidden" data-index="30"><img src="assets/img/galeria/realizacja-30.jpg" alt="Realizacja N-SYSTEM 30" width="800" height="600" loading="lazy" decoding="async"><span class="gallery-zoom"><svg><use href="#icon-zoom"/></svg></span></button>
+        <button class="gallery-tile is-more is-hidden" data-index="31"><img src="assets/img/galeria/realizacja-31.jpg" alt="Realizacja N-SYSTEM 31" width="800" height="600" loading="lazy" decoding="async"><span class="gallery-zoom"><svg><use href="#icon-zoom"/></svg></span></button>
+        <button class="gallery-tile is-more is-hidden" data-index="32"><img src="assets/img/galeria/realizacja-32.jpg" alt="Realizacja N-SYSTEM 32" width="800" height="600" loading="lazy" decoding="async"><span class="gallery-zoom"><svg><use href="#icon-zoom"/></svg></span></button>
+        <button class="gallery-tile is-more is-hidden" data-index="33"><img src="assets/img/galeria/realizacja-33.jpg" alt="Realizacja N-SYSTEM 33" width="800" height="600" loading="lazy" decoding="async"><span class="gallery-zoom"><svg><use href="#icon-zoom"/></svg></span></button>
+        <button class="gallery-tile is-wide is-more is-hidden" data-index="34"><img src="assets/img/galeria/realizacja-34.jpg" alt="Realizacja N-SYSTEM 34" width="800" height="600" loading="lazy" decoding="async"><span class="gallery-zoom"><svg><use href="#icon-zoom"/></svg></span></button>
+        <button class="gallery-tile is-more is-hidden" data-index="35"><img src="assets/img/galeria/realizacja-35.jpg" alt="Realizacja N-SYSTEM 35" width="800" height="600" loading="lazy" decoding="async"><span class="gallery-zoom"><svg><use href="#icon-zoom"/></svg></span></button>
+        <button class="gallery-tile is-more is-hidden" data-index="36"><img src="assets/img/galeria/realizacja-36.jpg" alt="Realizacja N-SYSTEM 36" width="800" height="600" loading="lazy" decoding="async"><span class="gallery-zoom"><svg><use href="#icon-zoom"/></svg></span></button>
+        <button class="gallery-tile is-more is-hidden" data-index="37"><img src="assets/img/galeria/realizacja-37.jpg" alt="Realizacja N-SYSTEM 37" width="800" height="600" loading="lazy" decoding="async"><span class="gallery-zoom"><svg><use href="#icon-zoom"/></svg></span></button>
+        <button class="gallery-tile is-more is-hidden" data-index="38"><img src="assets/img/galeria/realizacja-38.jpg" alt="Realizacja N-SYSTEM 38" width="800" height="600" loading="lazy" decoding="async"><span class="gallery-zoom"><svg><use href="#icon-zoom"/></svg></span></button>
+        <button class="gallery-tile is-more is-hidden" data-index="39"><img src="assets/img/galeria/realizacja-39.jpg" alt="Realizacja N-SYSTEM 39" width="800" height="600" loading="lazy" decoding="async"><span class="gallery-zoom"><svg><use href="#icon-zoom"/></svg></span></button>
+        <button class="gallery-tile is-more is-hidden" data-index="40"><img src="assets/img/galeria/realizacja-40.jpg" alt="Realizacja N-SYSTEM 40" width="800" height="600" loading="lazy" decoding="async"><span class="gallery-zoom"><svg><use href="#icon-zoom"/></svg></span></button>
+      </div>
+      <div class="gallery-more-row" data-reveal>
+        <button type="button" class="btn btn-ghost-themed" id="galleryMoreBtn">
+          <span data-i18n="gallery.showMore">Pokaż więcej realizacji</span>
+          <svg><use href="#icon-arrow-down"/></svg>
+        </button>
       </div>
 
       <!-- TODO(client): podmienić panele PRZED/PO na prawdziwe zdjęcia z realizacji -->
@@ -677,8 +708,8 @@
   <div class="lightbox-content">
     <button class="lightbox-close" id="lightboxClose" aria-label="Zamknij"><svg><use href="#icon-close"/></svg></button>
     <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Poprzednie zdjęcie"><svg><use href="#icon-chevron-left"/></svg></button>
-    <svg class="big-icon" id="lightboxIcon"><use href="#icon-gate"/></svg>
-    <span id="lightboxTitle" style="font-size:.9rem;"></span>
+    <img id="lightboxImage" src="" alt="">
+    <span id="lightboxTitle"></span>
     <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Następne zdjęcie"><svg><use href="#icon-chevron-right"/></svg></button>
   </div>
 </div>
