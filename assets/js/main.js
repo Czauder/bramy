@@ -57,19 +57,6 @@
     });
   }
 
-  /* ---------- Suwak przed/po ---------- */
-  document.querySelectorAll(".before-after").forEach(function (widget) {
-    var range = widget.querySelector("input[type=range]");
-    var afterLayer = widget.querySelector(".before-after-after");
-    if (!range || !afterLayer) return;
-    function update() {
-      afterLayer.style.clipPath = "inset(0 " + (100 - range.value) + "% 0 0)";
-      widget.style.setProperty("--handle-pos", range.value + "%");
-    }
-    range.addEventListener("input", update);
-    update();
-  });
-
   /* ---------- Scroll reveal ---------- */
   var revealTargets = document.querySelectorAll("[data-reveal], [data-reveal-stagger]");
   if (reduceMotion) {

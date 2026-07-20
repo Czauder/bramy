@@ -385,41 +385,6 @@ p { color: var(--text-secondary); }
 .trust-badge { display: flex; align-items: center; gap: .6rem; color: var(--text-muted); font-size: .85rem; font-weight: 600; }
 .trust-badge svg { width: 22px; height: 22px; color: var(--orange-light); flex-shrink: 0; }
 
-/* ---------- SUWAK PRZED/PO ---------- */
-.before-after {
-  position: relative; aspect-ratio: 16/10; border-radius: var(--radius-lg); overflow: hidden;
-  border: var(--border-subtle); margin-top: 2.5rem; max-width: 760px; margin-inline: auto;
-  --handle-pos: 50%;
-}
-.before-after-before, .before-after-after {
-  position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .6rem;
-}
-.before-after-before { background: linear-gradient(150deg, var(--bg-elevated), var(--bg-surface-alt)); color: var(--text-muted); }
-.before-after-after { background: linear-gradient(150deg, var(--orange-deep), var(--orange-dark)); color: #fff; clip-path: inset(0 50% 0 0); }
-.before-after svg { width: 40px; height: 40px; opacity: .7; }
-.before-after-label {
-  position: absolute; top: 1rem; padding: .35rem .8rem; border-radius: var(--radius-pill);
-  font-size: .75rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
-  background: rgba(0, 0, 0, .55); color: #fff;
-}
-.before-after-label.is-before { left: 1rem; }
-.before-after-label.is-after { right: 1rem; }
-.before-after-handle {
-  position: absolute; top: 0; bottom: 0; left: var(--handle-pos); width: 3px; background: #fff;
-  transform: translateX(-50%); pointer-events: none; box-shadow: 0 0 0 1px rgba(0, 0, 0, .2);
-}
-.before-after-knob {
-  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-  width: 40px; height: 40px; border-radius: 50%; background: var(--gradient-cta);
-  display: grid; place-items: center; box-shadow: 0 6px 18px rgba(0, 0, 0, .35);
-}
-.before-after-knob svg { width: 18px; height: 18px; color: var(--text-on-orange); }
-.before-after input[type="range"] {
-  position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize;
-  -webkit-appearance: none; appearance: none;
-}
-.before-after input[type="range"]:focus-visible { outline: none; }
-.before-after:has(input[type="range"]:focus-visible) { outline: 2px solid var(--focus-ring); outline-offset: 3px; }
 
 /* ---------- USP ---------- */
 .usp { padding-block: clamp(2.5rem, 5vw, 4rem); border-block: var(--border-subtle); background: var(--bg-surface); }

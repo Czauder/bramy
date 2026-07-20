@@ -101,9 +101,7 @@
 <symbol id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></symbol>
 <symbol id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></symbol>
 <symbol id="icon-list" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></symbol>
-<symbol id="icon-image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></symbol>
-<symbol id="icon-arrow-left-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><line x1="21" y1="5" x2="3" y2="5"/><polyline points="7 23 3 19 7 15"/><line x1="3" y1="19" x2="21" y2="19"/></symbol>
-</defs>
+<symbol id="icon-image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></symbol></defs>
 </svg>
 
 <!-- ================= NAVBAR ================= -->
@@ -476,22 +474,6 @@
           <span data-i18n="gallery.showMore">Pokaż więcej realizacji</span>
           <svg><use href="#icon-arrow-down"/></svg>
         </button>
-      </div>
-
-      <!-- TODO(client): podmienić panele PRZED/PO na prawdziwe zdjęcia z realizacji -->
-      <div class="before-after" data-reveal>
-        <div class="before-after-before">
-          <svg><use href="#icon-fence"/></svg>
-          <span data-i18n="beforeAfter.before">PRZED</span>
-        </div>
-        <div class="before-after-after">
-          <svg><use href="#icon-gate"/></svg>
-          <span data-i18n="beforeAfter.after">PO</span>
-        </div>
-        <div class="before-after-handle"><span class="before-after-knob"><svg><use href="#icon-arrow-left-right"/></svg></span></div>
-        <span class="before-after-label is-before" data-i18n="beforeAfter.before">PRZED</span>
-        <span class="before-after-label is-after" data-i18n="beforeAfter.after">PO</span>
-        <input type="range" min="0" max="100" value="50" aria-label="Przesuń, aby porównać stan przed i po realizacji" data-i18n-aria-label="beforeAfter.sliderLabel">
       </div>
     </div>
   </section>
