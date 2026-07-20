@@ -340,15 +340,6 @@ p { color: var(--text-secondary); }
 @media (min-width: 640px) { .hero-trustline { display: flex; } }
 .hide-mobile { display: none; }
 @media (min-width: 640px) { .hide-mobile { display: inline; } }
-.hero-scroll-cue {
-  position: absolute; bottom: 2.2rem; left: 50%; transform: translateX(-50%);
-  display: flex; flex-direction: column; align-items: center; gap: .5rem;
-  color: var(--text-muted); font-size: .75rem; letter-spacing: .1em; text-transform: uppercase;
-  z-index: 2;
-}
-.hero-scroll-cue svg { width: 20px; height: 20px; animation: scrollBounce 2s ease-in-out infinite; color: var(--orange-light); }
-@keyframes scrollBounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
-
 /* ---------- WYBÓR ŚCIEŻKI (nowa brama / usterka) ---------- */
 .path-select { padding-block: clamp(2.5rem, 5vw, 4rem); background: var(--bg-base); }
 .path-grid { display: grid; gap: 1.5rem; grid-template-columns: 1fr; }
