@@ -868,13 +868,29 @@ body.menu-open .whatsapp-float {
   background: radial-gradient(circle, rgba(255, 122, 26, .5), transparent 72%);
   filter: blur(4px); animation: loaderGlow 1.8s ease-in-out infinite;
 }
-.page-loader-mark img { position: relative; z-index: 1; width: 100%; height: 100%; animation: loaderPulse 1.8s ease-in-out infinite; }
+.page-loader-mark img {
+  position: relative; z-index: 1; width: 100%; height: 100%;
+  animation: logoAssemble .8s cubic-bezier(.34, 1.56, .64, 1) both,
+             loaderPulse 1.8s ease-in-out .8s infinite;
+}
 .page-loader-tagline {
   display: flex; flex-direction: column; text-align: left; text-transform: lowercase;
   font-family: var(--font-heading); font-weight: 700; font-size: clamp(1rem, 1vw + .8rem, 1.3rem);
   line-height: 1.28; letter-spacing: .01em; color: var(--on-dark-primary);
 }
+.page-loader-tagline span {
+  opacity: 0; transform: translateY(10px);
+  animation: tagRise .5s cubic-bezier(.16, 1, .3, 1) both;
+}
+.page-loader-tagline span:nth-child(1) { animation-delay: .45s; }
+.page-loader-tagline span:nth-child(2) { animation-delay: .55s; }
+.page-loader-tagline span:nth-child(3) { animation-delay: .65s; }
 .page-loader-tagline .is-accent { color: var(--on-dark-accent); }
+@keyframes logoAssemble {
+  0% { opacity: 0; transform: scale(.55) rotate(-16deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+@keyframes tagRise { to { opacity: 1; transform: translateY(0); } }
 @keyframes loaderPulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.08); } }
 @keyframes loaderGlow { 0%, 100% { opacity: .45; } 50% { opacity: 1; } }
 .page-loader-bar { position: relative; width: 140px; height: 3px; border-radius: 2px; background: rgba(255, 255, 255, .15); overflow: hidden; }
