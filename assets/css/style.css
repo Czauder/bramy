@@ -780,7 +780,7 @@ body.menu-open .whatsapp-float {
 .segmented-toggle input:focus-visible + label { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
 
 .conditional-fields { display: grid; gap: 1.2rem; padding: 1.2rem; border-radius: var(--radius-md); background: var(--bg-elevated); border: var(--border-subtle); }
-.conditional-fields[hidden], .field[hidden], .service-quick-call[hidden], .service-form[hidden] { display: none; }
+.conditional-fields[hidden], .field[hidden], .service-form[hidden] { display: none; }
 
 .checkbox-row { display: flex; align-items: flex-start; gap: .7rem; font-size: .9rem; color: var(--text-secondary); }
 .checkbox-row input { margin-top: .25rem; accent-color: var(--orange); flex-shrink: 0; width: 18px; height: 18px; }
@@ -820,9 +820,6 @@ body.menu-open .whatsapp-float {
 .form-success h2 { margin-bottom: .8rem; }
 .form-success p { max-width: 460px; margin-inline: auto; }
 .form-success .btn { margin-top: 2rem; }
-
-.service-quick-call { display: flex; align-items: center; gap: .6rem; font-size: .92rem; color: var(--text-secondary); margin-top: 1rem; }
-.service-quick-call a { color: var(--orange-light); font-weight: 700; }
 
 /* ---------- STRONA KONTAKT ---------- */
 .contact-page-body { max-width: 640px; margin-inline: auto; display: grid; gap: 1.4rem; margin-top: 3rem; }

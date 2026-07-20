@@ -69,12 +69,6 @@
       <h1 data-i18n="hero.cta2">Zgłoś usterkę</h1>
       <p data-i18n="symptom.subtitle">Opisz problem. Skontaktujemy się z Tobą i ustalimy kolejny krok.</p>
     </div>
-    <p class="service-quick-call" data-reveal>
-      <svg style="width:18px;height:18px;color:var(--orange-light);"><use href="#icon-phone"/></svg>
-      <span data-i18n="service.orCall">Wolisz zadzwonić?</span>
-      <a href="tel:+48602424608">+48 602 424 608</a>
-    </p>
-
     <!-- ================= FORMULARZ ================= -->
     <form class="service-form" id="serviceForm" action="https://formspree.io/f/YOUR_SERVICE_FORM_ID" method="POST" data-reveal novalidate>
       <!-- TODO(client): podmienić YOUR_SERVICE_FORM_ID na prawdziwy identyfikator z konta Formspree -->
@@ -92,7 +86,7 @@
 
         <div class="field">
           <label for="reporterName" data-i18n="service.reporterName">Imię i nazwisko / nazwa firmy</label>
-          <input type="text" id="reporterName" name="reporterName" required autocomplete="name">
+          <input type="text" id="reporterName" name="reporterName" required autocomplete="name" aria-describedby="reporterNameError">
           <span class="field-error" id="reporterNameError" role="alert"><svg><use href="#icon-alert"/></svg><span data-i18n="service.err.required">To pole jest wymagane.</span></span>
         </div>
 
@@ -240,7 +234,7 @@
 
       <div class="form-section">
         <label class="checkbox-row">
-          <input type="checkbox" id="svcConsent" name="consent" required>
+          <input type="checkbox" id="svcConsent" name="consent" required aria-describedby="svcConsentError">
           <span data-i18n="service.consent">Wyrażam zgodę na przetwarzanie moich danych osobowych w celu obsługi zgłoszenia i kontaktu w sprawie realizacji usługi — zgodnie z <a href="polityka-prywatnosci.html">Polityką Prywatności</a>.</span>
         </label>
         <span class="field-error" id="svcConsentError" role="alert"><svg><use href="#icon-alert"/></svg><span data-i18n="service.err.consent">Zgoda jest wymagana, aby wysłać zgłoszenie.</span></span>

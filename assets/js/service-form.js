@@ -208,7 +208,6 @@
 
   function showSuccess() {
     form.hidden = true;
-    document.querySelector(".service-quick-call").hidden = true;
     successPanel.classList.add("is-visible");
     successPanel.scrollIntoView({ behavior: "smooth", block: "start" });
   }
