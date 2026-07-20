@@ -6,7 +6,7 @@
 
 /* ---------- RESET ---------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; max-width: 100%; }
 body {
   min-height: 100vh;
   background: var(--bg-base);
@@ -41,6 +41,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
 
   /* gradienty */
   --gradient-hero: linear-gradient(135deg, #050505 0%, #1a0f00 45%, var(--orange-dark) 100%);
+  --hero-bg: var(--gradient-hero); /* hero jest tematyzowany osobno (patrz [data-theme="light"]) — loader i wizytówka zawsze używają --gradient-hero wprost i zostają ciemne */
   --gradient-cta: linear-gradient(90deg, var(--orange-mid) 0%, var(--orange-light) 100%);
   --gradient-divider: linear-gradient(90deg, transparent, var(--orange) 50%, transparent);
   --gradient-border: linear-gradient(135deg, var(--orange), transparent 70%);
@@ -85,7 +86,6 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
   --on-dark-secondary: #b5b5ba;
   --on-dark-muted: #8a8a90;
   --on-dark-accent: #ffb347;
-  --gradient-text-on-dark: linear-gradient(90deg, #ffb347, #ff6a00);
 }
 
 /* ---------- JASNY MOTYW (przełącznik, domyślnie wyłączony) ---------- */
@@ -105,6 +105,14 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
   --focus-ring: var(--orange-dark);
   /* pomarańcz na jasnym tle: ciemniejszy odcień, żeby tekst/linki miały kontrast AA (5.4:1 na bieli) */
   --orange-light: #b84600;
+  /* Guziki w jasnym motywie: biały tekst na głębszym pomarańczu (obie plamy
+     gradientu ≥4.5:1 z bielą — jasny "orange-mid" na białym tekście nie
+     przechodziłby AA, więc dla jasnego motywu używamy ciemniejszej pary). */
+  --gradient-cta: linear-gradient(90deg, #b84600, #c94f00);
+  --text-on-orange: #ffffff;
+  /* Hero w jasnym motywie jest jasny (nie tak ciemny jak stopka/CTA-baner) —
+     loader i wizytówka nadal używają --gradient-hero wprost i zostają ciemne. */
+  --hero-bg: linear-gradient(135deg, #fffaf5 0%, #ffddb0 50%, var(--orange) 100%);
 }
 
 /* ---------- TYPOGRAFIA ---------- */
@@ -119,7 +127,6 @@ p { color: var(--text-secondary); }
 }
 .eyebrow::before { content: ''; width: 24px; height: 2px; background: var(--gradient-cta); border-radius: 2px; }
 .gradient-text { background: var(--gradient-text); -webkit-background-clip: text; background-clip: text; color: transparent; }
-.hero-inner .gradient-text { background: var(--gradient-text-on-dark); -webkit-background-clip: text; background-clip: text; }
 
 /* ---------- UTILS ---------- */
 .container { width: 100%; max-width: var(--container-max); margin-inline: auto; padding-inline: clamp(1.25rem, 4vw, 2.5rem); }
@@ -165,16 +172,19 @@ p { color: var(--text-secondary); }
 }
 .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(255, 122, 26, .45); }
 .btn-primary:active { transform: translateY(-1px); }
-/* .btn-ghost domyślnie zakłada ciemne tło (hero, wizytówka) — stałe jasne kolory.
-   Dwa wyjątki na tematyzowanych powierzchniach (cookie banner, polityka
-   prywatności) mają własne, tematyzowane nadpisania niżej. */
+/* .btn-ghost domyślnie zakłada zawsze-ciemne tło (wizytówka, menu mobilne) —
+   stałe jasne kolory. Hero ma teraz własne, tematyzowane nadpisanie niżej
+   (tło hero zmienia się z motywem), tak samo jak cookie banner / polityka. */
 .btn-ghost {
   background: transparent; color: var(--on-dark-primary);
   border: 1px solid rgba(255, 255, 255, .25);
 }
 .btn-ghost:hover { border-color: var(--orange); color: var(--on-dark-accent); background: rgba(255, 122, 26, .08); }
-#cookieDecline, #resetCookiesBtn, .sticky-call-bar .btn-ghost { color: var(--text-primary); border: var(--border-subtle); }
-#cookieDecline:hover, #resetCookiesBtn:hover, .sticky-call-bar .btn-ghost:hover { color: var(--orange-light); border-color: var(--orange); background: rgba(255, 122, 26, .08); }
+#cookieDecline, #resetCookiesBtn { color: var(--text-primary); border: var(--border-subtle); }
+#cookieDecline:hover, #resetCookiesBtn:hover { color: var(--orange-light); border-color: var(--orange); background: rgba(255, 122, 26, .08); }
+.hero-cta-row .btn-ghost { color: var(--text-primary); border-color: rgba(255, 255, 255, .25); }
+.hero-cta-row .btn-ghost:hover { color: var(--orange-light); }
+:root[data-theme="light"] .hero-cta-row .btn-ghost { border-color: rgba(20, 15, 5, .22); }
 /* Wariant .btn-ghost do użycia na zwykłych (tematyzowanych) treściach stron
    — poza hero/wizytówką/menu mobilnym, gdzie tło zawsze zostaje ciemne. */
 .btn-ghost-themed { background: transparent; color: var(--text-primary); border: var(--border-subtle); }
@@ -196,43 +206,31 @@ p { color: var(--text-secondary); }
   box-shadow: 0 8px 30px rgba(0, 0, 0, .35);
   border-bottom: var(--border-subtle);
 }
-/* Niescrollowany navbar zawsze stoi na ciemnym hero (stałe jasne kolory).
-   Po przewinięciu ma tło --nav-scrim (jasne w jasnym motywie) — dopiero wtedy
-   tekst/ikony przełączają się na tematyzowane kolory. */
-.navbar.is-scrolled .logo,
-.navbar.is-scrolled .nav-links a {
-  color: var(--text-primary);
-}
-.navbar.is-scrolled .logo-accent { color: var(--orange-light); }
-.navbar.is-scrolled .nav-links a:hover { color: var(--orange); }
-.navbar.is-scrolled .lang-switch { background: var(--bg-elevated); }
-.navbar.is-scrolled .lang-switch button:not(.is-active) { color: var(--text-muted); }
-.navbar.is-scrolled .theme-toggle { background: var(--bg-elevated); color: var(--text-secondary); }
-.navbar.is-scrolled .menu-toggle { background: var(--bg-elevated); color: var(--text-primary); }
-/* Nieprzewinięty navbar stoi na ciemnym hero — .lang-switch/.theme-toggle/.menu-toggle
-   mają domyślnie tematyzowane tło (dobre dla minimal-header na stronie polityki),
-   więc tutaj celowo nadpisujemy je na stałe "szkło na ciemnym tle" tylko w tym kontekście. */
-.navbar:not(.is-scrolled) .lang-switch { background: rgba(255, 255, 255, .08); border-color: rgba(255, 255, 255, .18); }
-.navbar:not(.is-scrolled) .lang-switch button:not(.is-active) { color: rgba(255, 255, 255, .65); }
-.navbar:not(.is-scrolled) .theme-toggle { background: rgba(255, 255, 255, .08); border-color: rgba(255, 255, 255, .18); color: rgba(255, 255, 255, .85); }
-.navbar:not(.is-scrolled) .theme-toggle:hover { color: var(--on-dark-accent); }
-.navbar:not(.is-scrolled) .menu-toggle { background: rgba(255, 255, 255, .08); border-color: rgba(255, 255, 255, .18); color: rgba(255, 255, 255, .9); }
+/* Hero (za przezroczystym navbarem) jest teraz tematyzowany tak samo jak
+   --nav-scrim po przewinięciu, więc logo/linki/przyciski navbara używają
+   zwykłych tematyzowanych kolorów w obu stanach — bez specjalnych wyjątków. */
 .navbar .container { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
 .logo {
   display: flex; align-items: center; gap: .6rem; font-family: var(--font-heading); font-weight: 800;
-  font-size: 1.25rem; letter-spacing: -.01em; color: var(--on-dark-primary); transition: color var(--transition-base);
+  font-size: 1.25rem; letter-spacing: -.01em; color: var(--text-primary); transition: color var(--transition-base);
 }
 .logo .logo-mark { width: 34px; height: 34px; display: grid; place-items: center; flex-shrink: 0; }
 .logo .logo-mark img { width: 100%; height: 100%; display: block; }
-.logo-accent { color: var(--on-dark-accent); transition: color var(--transition-base); }
+.logo-accent { color: var(--orange-light); transition: color var(--transition-base); }
+/* Stopka zostaje zawsze ciemna (patrz sekcja FOOTER) — jej logo ma stałe jasne kolory. */
+.site-footer .logo { color: var(--on-dark-primary); }
+.site-footer .logo-accent { color: var(--on-dark-accent); }
 .nav-links { display: none; align-items: center; gap: 2.1rem; }
-.nav-links a { font-weight: 600; font-size: .95rem; color: var(--on-dark-secondary); position: relative; padding-block: .3rem; transition: color var(--transition-base); }
+.nav-links a { font-weight: 600; font-size: .95rem; color: var(--text-secondary); position: relative; padding-block: .3rem; transition: color var(--transition-base); }
 .nav-links a::after {
   content: ''; position: absolute; left: 0; right: 100%; bottom: -2px; height: 2px;
   background: var(--gradient-cta); transition: right var(--transition-base); border-radius: 2px;
 }
-.nav-links a:hover { color: var(--on-dark-primary); }
+.nav-links a:hover { color: var(--orange); }
 .nav-links a:hover::after { right: 0; }
+.navbar.is-scrolled .lang-switch { background: var(--bg-elevated); }
+.navbar.is-scrolled .theme-toggle { background: var(--bg-elevated); }
+.navbar.is-scrolled .menu-toggle { background: var(--bg-elevated); }
 .navbar-actions { display: flex; align-items: center; gap: .9rem; }
 .lang-switch { display: flex; align-items: center; gap: .25rem; background: var(--bg-surface); border: var(--border-subtle); border-radius: var(--radius-pill); padding: .25rem; }
 .lang-switch button {
@@ -248,8 +246,6 @@ p { color: var(--text-secondary); }
 }
 .nav-call-icon:hover { border-color: var(--orange); color: var(--orange-light); }
 .nav-call-icon svg { width: 18px; height: 18px; }
-.navbar:not(.is-scrolled) .nav-call-icon { background: rgba(255, 255, 255, .08); border-color: rgba(255, 255, 255, .18); color: rgba(255, 255, 255, .85); }
-.navbar:not(.is-scrolled) .nav-call-icon:hover { color: var(--on-dark-accent); }
 
 .theme-toggle {
   display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%;
@@ -281,15 +277,6 @@ p { color: var(--text-secondary); }
   visibility: hidden;
 }
 .mobile-menu.is-open { transform: translateY(0); visibility: visible; }
-.mobile-menu-head { display: flex; align-items: center; justify-content: space-between; padding: 1.3rem 1.5rem; }
-.mobile-menu-head .logo { color: #f5f5f4; }
-.mobile-menu-close {
-  display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%;
-  background: rgba(255, 255, 255, .08); border: 1px solid rgba(255, 255, 255, .15); color: #f5f5f4;
-  transition: all var(--transition-base);
-}
-.mobile-menu-close:hover { background: rgba(255, 122, 26, .18); border-color: var(--orange); }
-.mobile-menu-close svg { width: 20px; height: 20px; }
 .mobile-menu-links {
   flex: 1; display: flex; flex-direction: column; justify-content: center; gap: .35rem;
   padding: 0 1.75rem;
@@ -320,7 +307,7 @@ p { color: var(--text-secondary); }
 .hero {
   position: relative; min-height: 100svh; display: flex; align-items: center;
   padding-top: 6rem; overflow: hidden;
-  background: var(--gradient-hero);
+  background: var(--hero-bg);
   background-size: 220% 220%;
   animation: heroGradientShift 16s ease-in-out infinite;
 }
@@ -341,24 +328,25 @@ p { color: var(--text-secondary); }
     repeating-linear-gradient(115deg, rgba(255,255,255,.035) 0 2px, transparent 2px 90px);
   opacity: .6; pointer-events: none;
 }
-/* Hero jest zawsze ciemny (niezależnie od motywu) — cały tekst ma stałe jasne
-   kolory --on-dark-*, nie tematyzowane --text-*/--orange-light. */
+/* Hero jest teraz tematyzowany (tło --hero-bg, patrz [data-theme="light"]) —
+   tekst używa zwykłych tematyzowanych kolorów, tak jak reszta strony. */
 .hero-inner { position: relative; z-index: 2; display: grid; gap: 1.6rem; max-width: 760px; }
-.hero-inner h1 { color: var(--on-dark-primary); }
-.hero-inner .eyebrow { color: var(--on-dark-accent); }
-.hero-inner .eyebrow::before { background: var(--gradient-cta); }
-.hero-inner .lede { font-size: clamp(1.05rem, 1.2vw + .8rem, 1.3rem); max-width: 560px; color: var(--on-dark-secondary); }
+.hero-inner h1 { color: var(--text-primary); }
+.hero-inner .lede { font-size: clamp(1.05rem, 1.2vw + .8rem, 1.3rem); max-width: 560px; }
 .hero-cta-row { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: .6rem; }
-.hero-trustline { display: flex; flex-wrap: wrap; gap: 1.6rem; margin-top: 1.6rem; color: var(--on-dark-muted); font-size: .9rem; }
+.hero-trustline { display: none; flex-wrap: wrap; gap: 1.6rem; margin-top: 1.6rem; color: var(--text-muted); font-size: .9rem; }
 .hero-trustline span { display: inline-flex; align-items: center; gap: .5em; }
-.hero-trustline svg { width: 1.1em; height: 1.1em; color: var(--on-dark-accent); }
+.hero-trustline svg { width: 1.1em; height: 1.1em; color: var(--orange-light); }
+@media (min-width: 640px) { .hero-trustline { display: flex; } }
+.hide-mobile { display: none; }
+@media (min-width: 640px) { .hide-mobile { display: inline; } }
 .hero-scroll-cue {
   position: absolute; bottom: 2.2rem; left: 50%; transform: translateX(-50%);
   display: flex; flex-direction: column; align-items: center; gap: .5rem;
-  color: var(--on-dark-muted); font-size: .75rem; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--text-muted); font-size: .75rem; letter-spacing: .1em; text-transform: uppercase;
   z-index: 2;
 }
-.hero-scroll-cue svg { width: 20px; height: 20px; animation: scrollBounce 2s ease-in-out infinite; color: var(--on-dark-accent); }
+.hero-scroll-cue svg { width: 20px; height: 20px; animation: scrollBounce 2s ease-in-out infinite; color: var(--orange-light); }
 @keyframes scrollBounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
 
 /* ---------- WYBÓR ŚCIEŻKI (nowa brama / usterka) ---------- */
@@ -608,9 +596,10 @@ p { color: var(--text-secondary); }
 .contact-grid { display: grid; gap: 2.5rem; grid-template-columns: 1fr; }
 .contact-form { background: var(--bg-surface); border: var(--border-subtle); border-radius: var(--radius-lg); padding: clamp(1.6rem, 3vw, 2.4rem); display: grid; gap: 1.2rem; }
 .form-row { display: grid; gap: 1.2rem; grid-template-columns: 1fr; }
-.field { display: grid; gap: .5rem; }
+.field { display: grid; gap: .5rem; min-width: 0; }
 .field label { font-size: .85rem; font-weight: 600; color: var(--text-secondary); }
 .field input, .field select, .field textarea {
+  width: 100%; max-width: 100%; min-width: 0;
   background: var(--bg-elevated); border: var(--border-subtle); border-radius: var(--radius-sm);
   padding: .85rem 1rem; color: var(--text-primary); transition: border-color var(--transition-base), box-shadow var(--transition-base);
 }
@@ -713,23 +702,8 @@ p { color: var(--text-secondary); }
   .back-to-top { bottom: calc(1rem + 4.5rem); }
 }
 
-/* ---------- LEPKI PASEK „ZADZWOŃ” (tylko mobile) ---------- */
-.sticky-call-bar {
-  position: fixed; left: 0; right: 0; bottom: 0; z-index: 260;
-  display: flex; gap: .6rem; padding: .65rem .75rem;
-  background: var(--nav-scrim); backdrop-filter: blur(var(--blur-navbar));
-  border-top: var(--border-subtle);
-  padding-bottom: calc(.65rem + env(safe-area-inset-bottom, 0px));
-}
-.sticky-call-bar .btn { flex: 1 1 auto; padding-inline: .8rem; font-size: .92rem; }
-.sticky-call-bar .btn-whatsapp { flex: 0 0 auto; width: 48px; padding: 0; background: #25d366; color: #fff; }
-.sticky-call-bar .btn-whatsapp svg { width: 22px; height: 22px; }
-@media (min-width: 1024px) { .sticky-call-bar { display: none; } }
-
-/* Gdy pełnoekranowe menu mobilne jest otwarte, chowamy lepki pasek i pływające
-   przyciski — inaczej "Zadzwoń" pokazywało się jednocześnie w pasku i w stopce
-   menu, co wyglądało jak duplikat. */
-body.menu-open .sticky-call-bar,
+/* Gdy pełnoekranowe menu mobilne jest otwarte, chowamy pływające przyciski —
+   inaczej "Zadzwoń" pokazywało się jednocześnie w stopce menu i pod spodem. */
 body.menu-open .back-to-top,
 body.menu-open .whatsapp-float {
   display: none;
@@ -840,13 +814,8 @@ body.menu-open .whatsapp-float {
 .legal-content ul { display: grid; gap: .5rem; margin-top: .6rem; padding-left: 1.2rem; list-style: disc; }
 .legal-back { display: inline-flex; align-items: center; gap: .5em; margin-bottom: 2rem; color: var(--orange-light); font-weight: 600; font-size: .9rem; }
 .legal-back svg { width: 18px; height: 18px; }
-/* Nagłówek strony polityki prywatności nie stoi nad hero — jest zawsze
-   tematyzowaną powierzchnią (--nav-scrim), więc logo używa tematyzowanych
-   kolorów, nie stałych --on-dark-* (w przeciwieństwie do głównego navbara). */
 .minimal-header { position: fixed; inset-inline: 0; top: 0; z-index: 50; padding-block: 1.2rem; background: var(--nav-scrim); backdrop-filter: blur(12px); border-bottom: var(--border-subtle); }
 .minimal-header .container { display: flex; align-items: center; justify-content: space-between; }
-.minimal-header .logo { color: var(--text-primary); }
-.minimal-header .logo-accent { color: var(--orange-light); }
 
 /* ---------- RESPONSYWNOŚĆ ---------- */
 @media (min-width: 640px) {
@@ -871,7 +840,6 @@ body.menu-open .whatsapp-float {
 }
 @media (max-width: 1023px) {
   .mobile-menu { display: flex; }
-  body.has-sticky-bar { --mobile-bar-offset: 64px; padding-bottom: 64px; }
 }
 @media (min-width: 1024px) { .mobile-menu { display: none !important; } }
 

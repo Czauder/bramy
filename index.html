@@ -44,7 +44,7 @@
 }
 </script>
 </head>
-<body class="has-sticky-bar">
+<body>
 <noscript><style>#pageLoader{display:none!important;}</style></noscript>
 <div class="page-loader" id="pageLoader" aria-hidden="true">
   <div class="page-loader-brand">
@@ -140,14 +140,6 @@
 </header>
 
 <div class="mobile-menu" id="mobileMenu">
-  <div class="mobile-menu-head">
-    <a href="#main" class="logo">
-      <span class="logo-mark"><img src="assets/img/logo-n.svg" alt="N-SYSTEM" width="34" height="34"></span>
-    </a>
-    <button type="button" class="mobile-menu-close" id="mobileMenuClose" aria-label="Zamknij menu">
-      <svg><use href="#icon-close"/></svg>
-    </button>
-  </div>
   <nav class="mobile-menu-links" aria-label="Nawigacja mobilna">
     <a href="#oferta"><svg><use href="#icon-gate"/></svg><span data-i18n="nav.oferta">Oferta</span></a>
     <a href="serwis.html"><svg><use href="#icon-alert"/></svg><span data-i18n="nav.serwis">Serwis</span></a>
@@ -180,7 +172,7 @@
     <div class="container hero-inner" data-reveal-stagger>
       <span class="eyebrow" data-i18n="hero.eyebrow">Bramy • Automatyka • Serwis</span>
       <h1 data-i18n="hero.title">Twoja brama, nasza odpowiedzialność — <span class="gradient-text">od pomiaru po szybki serwis</span></h1>
-      <p class="lede" data-i18n="hero.subtitle">Własna produkcja bram i ogrodzeń, automatyka oraz szybki serwis — w jednym miejscu. Nowa brama czy awaria? Wybierz swoją ścieżkę poniżej.</p>
+      <p class="lede" data-i18n="hero.subtitle">Własna produkcja bram i ogrodzeń, automatyka oraz szybki serwis — w jednym miejscu. <span class="hide-mobile">Nowa brama czy awaria? Wybierz swoją ścieżkę poniżej.</span></p>
       <div class="hero-cta-row">
         <a href="#kontakt" class="btn btn-primary btn-lg">
           <svg><use href="#icon-phone"/></svg>
@@ -708,17 +700,6 @@
 <a href="https://wa.me/48602424608" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Napisz do nas na WhatsApp" data-i18n-aria-label="a11y.whatsappFloat">
   <svg><use href="#icon-message-circle"/></svg>
 </a>
-
-<div class="sticky-call-bar">
-  <a href="tel:+48602424608" class="btn btn-ghost">
-    <svg><use href="#icon-phone"/></svg>
-    <span data-i18n="stickyBar.call">Zadzwoń teraz</span>
-  </a>
-  <a href="serwis.html" class="btn btn-primary">
-    <svg><use href="#icon-alert"/></svg>
-    <span data-i18n="hero.cta2">Zgłoś usterkę</span>
-  </a>
-</div>
 
 <script defer src="assets/js/page-loader.js"></script>
 <script defer src="assets/js/cookie-consent.js"></script>

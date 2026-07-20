@@ -19,7 +19,6 @@
   /* ---------- Mobile menu ---------- */
   var menuToggle = document.getElementById("menuToggle");
   var mobileMenu = document.getElementById("mobileMenu");
-  var mobileMenuClose = document.getElementById("mobileMenuClose");
   if (menuToggle && mobileMenu) {
     function closeMobileMenu() {
       mobileMenu.classList.remove("is-open");
@@ -39,7 +38,6 @@
       if (mobileMenu.classList.contains("is-open")) closeMobileMenu();
       else openMobileMenu();
     });
-    if (mobileMenuClose) mobileMenuClose.addEventListener("click", closeMobileMenu);
     mobileMenu.querySelectorAll(".mobile-menu-links a").forEach(function (link) {
       link.addEventListener("click", closeMobileMenu);
     });
